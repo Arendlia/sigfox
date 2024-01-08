@@ -1,9 +1,13 @@
 let axios = require('axios');
 
 exports.home = async (req, res) => {
+    return res.render('search');
+}
+
+exports.sensor = async (req, res) => {
     const options = {
         'method': 'GET',
-        'url': process.env.API_URL+'/devices/',
+        'url': process.env.API_URL+'/devices/'+req.query.id,
         'headers': 
         {
             'Content-Type': 'application/json'
@@ -13,11 +17,10 @@ exports.home = async (req, res) => {
             'password': process.env.API_PASSWORD
         }
     };
-
     try {
         const result = await axios(options);
-        console.log(result.data);
-        return res.render('base', {'result': result.data});
+        return res.render('sensor', {'result': result.data});
     } catch (e) {
     }
+
 }
