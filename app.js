@@ -1,18 +1,10 @@
-const express = require('express');
+require('express-group-routes');
+require('dotenv').config({ path: `.env.local`, override: true });
+const express = require('express')
+const router = express.Router();
 const app = express();
-//import convertTimestampToDatetime from './Function/convertDate';
 
+// Router imports
+require('./router/router')(app);
 
-
-let date = convertTimestampToDatetime(1704701830000);
-app.get('/', (req, res) => {
-    res.send('Hello World!' + date)
-  })
-
-
-
-  function convertTimestampToDatetime(timestamp) {
-    var date = new Date(timestamp);  
-    return date;
-  }
 module.exports = app;
