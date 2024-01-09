@@ -4,12 +4,18 @@ exports.home = async (req, res) => {
     return res.render('search');
 }
 
+exports.homePost = async(req, res) => {
+    console.log(req.body);
+    const id = req.body.id;
+    res.redirect('/sensor/'+id);
+}
+
 exports.sensor = async (req, res) => {
     console.log('top')
     try {
         let result = await axios({
             'method': 'GET',
-            'url': process.env.API_URL+'/devices/'+req.query.id,
+            'url': process.env.API_URL+'/devices/'+req.params.id,
             'headers': 
             {
                 'Content-Type': 'application/json'
@@ -26,7 +32,7 @@ exports.sensor = async (req, res) => {
 }
 
 exports.getFirstMessage = async (req, res) => {
-    let url = process.env.API_URL+'/devices/'+req.query.id+'/messages?limit1';
+    let url = process.env.API_URL+'/devices/'+req.params.id+'/messages?limit1';
     let results = await axios({
         'method': 'GET',
         'url': url,
@@ -44,7 +50,7 @@ exports.getFirstMessage = async (req, res) => {
 
 exports.sensorMessagesAjax = async (req, res) => {
     let results = [];
-    let url = process.env.API_URL+'/devices/'+req.query.id+'/messages';
+    let url = process.env.API_URL+'/devices/'+req.params.id+'/messages';
     let result = {};
     while (url) {
         if (result != {}) {

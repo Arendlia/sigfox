@@ -10,10 +10,12 @@ const errorHandler = require('../middlewares/errorHandler');
 module.exports = (app) => {
     app.group("/", (router) => {
         router.get("/", MainController.home);
+        router.post("/", MainController.homePost);
     });
     app.group("/sensor", (router) => {
-        router.get("/", MainController.sensor);
-        router.get('/messagesajax', MainController.sensorMessagesAjax); // Create
+        router.get("/:id", MainController.sensor);
+        router.get('/:id/firstmessageajax', MainController.sensorMessagesAjax); // Create
+        router.get('/:id/messagesajax', MainController.sensorMessagesAjax); // Create
     })
     app.group("/errors", (router) => {
         router.get("/forbidden", errorHandler, forbiddenController.renderForbiddenPage);
