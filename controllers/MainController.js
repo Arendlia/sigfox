@@ -4,8 +4,8 @@ exports.home = async (req, res) => {
     return res.render('search');
 }
 
-exports.homePost = async(req, res) => {
-    console.log(req.body);
+exports.homePost = async (req, res) => {
+    console.log(req);
     const id = req.body.id;
     res.redirect('/sensor/'+id);
 }
