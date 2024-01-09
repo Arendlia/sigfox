@@ -45,10 +45,11 @@ exports.sensor = async (req, res) => {
 exports.sensorMessagesAjax = async (req, res) => {
     let results = [];
     let url = process.env.API_URL+'/devices/'+req.query.id+'/messages';
-    while (!result.paging.next) {
-        result =  await axios({
+    let result = {};
+    while (url) {
+        result = await axios({
             'method': 'GET',
-            'url': process.env.API_URL+'/devices/'+req.query.id+'/messages',
+            'url': url,
             'headers': 
             {
                 'Content-Type': 'application/json'
@@ -58,8 +59,10 @@ exports.sensorMessagesAjax = async (req, res) => {
                 'password': process.env.API_PASSWORD
             }
         });
-        results.push(result.data);
-        url = result.paging.next
+        console.log(result.status);
+        results.push(result?.data?.data);
+        url = result?.data?.paging?.next ?? null;
+        await new Promise(r => setTimeout(r, 1000));
     }
-    return results;
+    return res.send(results);
 }
