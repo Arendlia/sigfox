@@ -5,6 +5,7 @@ exports.home = async (req, res) => {
 }
 
 exports.sensor = async (req, res) => {
+    console.log('top')
     try {
         let result = await axios({
             'method': 'GET',
@@ -18,28 +19,27 @@ exports.sensor = async (req, res) => {
                 'password': process.env.API_PASSWORD
             }
         });
-        let sensor = result.data
-        if (sensor.group.id == process.env.API_SENSOR_GROUP) {
-            result =  await axios({
-                'method': 'GET',
-                'url': process.env.API_URL+'/devices/'+req.query.id+'/messages',
-                'headers': 
-                {
-                    'Content-Type': 'application/json'
-                },
-                'auth': {
-                    'username': process.env.API_USERNAME,
-                    'password': process.env.API_PASSWORD
-                }
-            });
-        }
-
-        
-
         return res.render('sensor', {'sensor': result.data});
     } catch (e) {
         
     }
+}
+
+exports.getFirstMessage = async (req, res) => {
+    let url = process.env.API_URL+'/devices/'+req.query.id+'/messages?limit1';
+    let results = await axios({
+        'method': 'GET',
+        'url': url,
+        'headers': 
+        {
+            'Content-Type': 'application/json'
+        },
+        'auth': {
+            'username': process.env.API_USERNAME,
+            'password': process.env.API_PASSWORD
+        }
+    });
+    return res.send(results.data)
 }
 
 exports.sensorMessagesAjax = async (req, res) => {
