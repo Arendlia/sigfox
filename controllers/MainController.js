@@ -47,6 +47,9 @@ exports.sensorMessagesAjax = async (req, res) => {
     let url = process.env.API_URL+'/devices/'+req.query.id+'/messages';
     let result = {};
     while (url) {
+        if (result != {}) {
+            await new Promise(r => setTimeout(r, 1000));
+        }
         result = await axios({
             'method': 'GET',
             'url': url,
@@ -62,7 +65,6 @@ exports.sensorMessagesAjax = async (req, res) => {
         console.log(result.status);
         results.push(result?.data?.data);
         url = result?.data?.paging?.next ?? null;
-        await new Promise(r => setTimeout(r, 1000));
     }
     return res.send(results);
 }
