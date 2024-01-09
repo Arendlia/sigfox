@@ -5,9 +5,10 @@ const router = express.Router();
 const app = express();
 
 // Router imports
-require('./router/router')(app);
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(express.static("public"))
+
+require('./router/router')(app);
 
 module.exports = app;
