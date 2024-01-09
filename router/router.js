@@ -10,14 +10,15 @@ const errorHandler = require('../middlewares/errorHandler');
 module.exports = (app) => {
     app.group("/", (router) => {
         router.get("/", MainController.home);
-        router.get("/sensor", MainController.sensor);
-        // Page error
-        router.get("/errors/forbidden", errorHandler, forbiddenController.renderForbiddenPage);
-        router.get("/errors/not-found", errorHandler, notFoundController.renderNotFoundPage);
-        router.get("/errors/error-internal", errorHandler, errorController.renderErrorPage);
-        router.get("/errors/bad-request", errorHandler, badRequestController.renderBadRequestPage);
-        // router.post('/create', ExampleController.create); // Create
-        // router.patch('/:id', middleware, ExampleController.patch); // Update
-        // router.delete('/:id', middleware, ExampleController.delete); // Delete
     });
+    app.group("/sensor", (router) => {
+        router.get("/", MainController.sensor);
+        router.get('/messagesajax', MainController.sensorMessagesAjax); // Create
+    })
+    app.group("/errors", (router) => {
+        router.get("/forbidden", errorHandler, forbiddenController.renderForbiddenPage);
+        router.get("/not-found", errorHandler, notFoundController.renderNotFoundPage);
+        router.get("/error-internal", errorHandler, errorController.renderErrorPage);
+        router.get("/bad-request", errorHandler, badRequestController.renderBadRequestPage);
+    })
 }
