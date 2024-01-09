@@ -1,5 +1,11 @@
 <%- include('layout/header') -%>
 
+Capteur: <%= sensor.id %>
 
+<% if (sensor.name.includes("B-keep")) { %>
+    Type: B-Keep
+<% } else if (sensor.name.includes("B-swarm")) { %>
+    Type: B-Swarm
+<% } %>
 
 <%- include('layout/footer') -%>
