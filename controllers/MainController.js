@@ -19,28 +19,9 @@ exports.sensor = async (req, res) => {
                 'password': process.env.API_PASSWORD
             }
         });
-        let sensor = result.data;
-        await new Promise(r => setTimeout(r, 1000));
-        if (sensor.group.id == process.env.API_SENSOR_GROUP) {
-            result =  await axios({
-                'method': 'GET',
-                'url': process.env.API_URL+'/devices/'+req.query.id+'/messages?limit=1',
-                'headers': 
-                {
-                    'Content-Type': 'application/json'
-                },
-                'auth': {
-                    'username': process.env.API_USERNAME,
-                    'password': process.env.API_PASSWORD
-                }
-            });
-        }
-
-        
-
         return res.render('sensor', {'sensor': result.data});
     } catch (e) {
-        console.log(e);
+        
     }
 }
 
