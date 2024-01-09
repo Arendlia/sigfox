@@ -1,0 +1,75 @@
+body{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: var(--regular-font-weight);
+    background-color: var(--background-color); 
+}
+
+.primary-background{
+    background-color: var(--primary-color); 
+}
+
+.background-background{
+    background-color: var(--background-color); 
+}
+
+.danger-background{
+    background-color: var(--danger-color); 
+}
+
+.warning-background{
+    background-color: var(--warning-color); 
+}
+
+.success-background{
+    background-color: var(--success-color); 
+}
+
+.item-background{
+    background-color: var(--item-color); 
+}
+
+
+
+.primary-text{
+   color: var(--primary-color); 
+}
+
+.text-text{
+    color: var(--text-color); 
+}
+
+.danger-text{
+    color: var(--danger-color); 
+}
+
+.warning-text{
+    color: var(--warning-color); 
+}
+
+.success-text{
+    color: var(--success-color); 
+}
+
+.item-text{
+    color: var(--item-color); 
+}
+
+.heading-text{
+    font-size: 30px;
+}
+
+.error-title{
+    font-size: 40px;
+}
+
+.error-type{
+    font-size: 150px;
+    font-weight: var(--bold-font-weight);
+}
+
+.logo{
+    margin: 0.5%;
+    width: 100px;
+    color: var(--item-color)
+}

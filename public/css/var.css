@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+:root {
+    --primary-color: #D6A96E;
+    --background-color: #EFEFEF;
+    --item-color: #F1F1F1;
+    --danger-color: #AF6767;
+    --warning-color: #B77E53;
+    --success-color: #76AA75;
+    --text-color: #646464;
+
+    --regular-font-weight: 400;
+    --bold-font-weight: 900;
+  }
