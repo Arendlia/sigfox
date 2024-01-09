@@ -1,9 +1,13 @@
 <%- include('layout/header') -%>
-
-<form method="POST" >
-    <label for="sensorIdInput">Id du capteur</label>
-    <input id="sensorIdInput" name="id" type="text" placeholder="Id du capteur">
-    <input type="submit" value="Rechercher le capteur">
-</form>
-
+<section class="background-svg background-background">
+    <div class="card card-center shadow">
+        <div class="card-body p-3">
+            <form method="GET" action="/sensor" class="d-flex flex-column">
+                <label class="mb-3 heading-text text-text" for="sensorIdInput">Entrez l'id du capteur :</label>
+                <input class="mb-3 form-control background-background interne-shadow" id="sensorIdInput" name="id" type="text" placeholder="Id du capteur">
+                <input class="mb-3 btn btn-secondary border-none primary-background item-text btn-submit" type="submit" value="Rechercher">
+            </form>
+        </div>
+    </div>
+</section>
 <%- include('layout/footer') -%>
