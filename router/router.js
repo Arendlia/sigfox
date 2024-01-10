@@ -12,7 +12,7 @@ module.exports = (app) => {
     });
     app.group("/sensor", (router) => {
         router.get("/:id", MainController.sensor);
-        router.get('/:id/lastMessage', MainController.getFirstMessage); // Create
+        router.get('/:id/last-message', MainController.getLastMessage); // Create
         router.get('/:id/messages', MainController.getAllMessages); // Create
     })
     app.group("/errors", (router) => {

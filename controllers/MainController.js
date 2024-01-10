@@ -5,13 +5,11 @@ exports.home = async (req, res) => {
 }
 
 exports.homePost = async (req, res) => {
-    console.log(req);
     const id = req.body.id;
     res.redirect('/sensor/'+id);
 }
 
 exports.sensor = async (req, res) => {
-    
     try {
         let result = await axios({
             'method': 'GET',
@@ -27,29 +25,41 @@ exports.sensor = async (req, res) => {
         });
         return res.render('sensor', {'sensor': result.data});
     } catch (e) {
-        
+        if (e.response.status == 500) {
+            return res.render('errors/errorServer');
+        }  
+        if (e.response.status == 429) {
+            return res.render('errors/tooManyRequests');
+        }  
     }
 }
 
 async function getMessages(sensor, limit, offset = 0) {
-    result = await axios({
-        'method': 'GET',
-        'url': `${process.env.API_URL}/devices/${sensor}/messages?offset=${offset}&limit=${limit}`,
-        'headers': 
-        {
-            'Content-Type': 'application/json'
-        },
-        'auth': {
-            'username': process.env.API_USERNAME,
-            'password': process.env.API_PASSWORD
-        }
-    });
-    return {"data": result?.data?.data, "next": result?.data?.paging?.next};
+    try {
+        result = await axios({
+            'method': 'GET',
+            'url': `${process.env.API_URL}/devices/${sensor}/messages?offset=${offset}&limit=${limit}`,
+            'headers': 
+            {
+                'Content-Type': 'application/json'
+            },
+            'auth': {
+                'username': process.env.API_USERNAME,
+                'password': process.env.API_PASSWORD
+            }
+        })
+        return {"data": result?.data?.data, "next": result?.data?.paging?.next, "status": result.status};
+    } catch (error) {
+        return {'error': error.response.data.message, 'status': error.response.status}
+    }
 }
 
-exports.getFirstMessage = async(req, res) => {
+exports.getLastMessage = async(req, res) => {
     messages = await getMessages(req.params.id, 1);
-    return messages.data;
+    if (messages.error) {
+        return res.send(messages);
+    }
+    return res.send(messages.data);
 }
 
 exports.getAllMessages = async (req, res) => {
@@ -61,13 +71,15 @@ exports.getAllMessages = async (req, res) => {
             await new Promise(r => setTimeout(r, 1000));
         }
         messages = await getMessages(req.params.id, limit, offset);
-        console.log(messages);
-        results.push(messages?.data);
+        if (messages.error) {
+            return res.send(messages);
+        }
         if (messages?.next) {
             offset = offset+limit;
         } else {
             limit = 0;
         }
+        results.push(messages?.data);
     }
     return res.send(results);
 }
