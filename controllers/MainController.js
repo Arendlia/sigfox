@@ -11,7 +11,7 @@ exports.homePost = async (req, res) => {
 }
 
 exports.sensor = async (req, res) => {
-    console.log('top')
+    
     try {
         let result = await axios({
             'method': 'GET',
@@ -31,11 +31,10 @@ exports.sensor = async (req, res) => {
     }
 }
 
-exports.getFirstMessage = async (req, res) => {
-    let url = process.env.API_URL+'/devices/'+req.params.id+'/messages?limit1';
-    let results = await axios({
+async function getMessages(sensor, limit, offset = 0) {
+    result = await axios({
         'method': 'GET',
-        'url': url,
+        'url': `${process.env.API_URL}/devices/${sensor}/messages?offset=${offset}&limit=${limit}`,
         'headers': 
         {
             'Content-Type': 'application/json'
@@ -45,32 +44,30 @@ exports.getFirstMessage = async (req, res) => {
             'password': process.env.API_PASSWORD
         }
     });
-    return res.send(results.data)
+    return {"data": result?.data?.data, "next": result?.data?.paging?.next};
 }
 
-exports.sensorMessagesAjax = async (req, res) => {
+exports.getFirstMessage = async(req, res) => {
+    messages = await getMessages(req.params.id, 1);
+    return messages.data;
+}
+
+exports.getAllMessages = async (req, res) => {
     let results = [];
-    let url = process.env.API_URL+'/devices/'+req.params.id+'/messages';
-    let result = {};
-    while (url) {
-        if (result != {}) {
+    let limit = 100;
+    let offset = 0;
+    while (limit == 100) {
+        if (offset != 0) {
             await new Promise(r => setTimeout(r, 1000));
         }
-        result = await axios({
-            'method': 'GET',
-            'url': url,
-            'headers': 
-            {
-                'Content-Type': 'application/json'
-            },
-            'auth': {
-                'username': process.env.API_USERNAME,
-                'password': process.env.API_PASSWORD
-            }
-        });
-        console.log(result.status);
-        results.push(result?.data?.data);
-        url = result?.data?.paging?.next ?? null;
+        messages = await getMessages(req.params.id, limit, offset);
+        console.log(messages);
+        results.push(messages?.data);
+        if (messages?.next) {
+            offset = offset+limit;
+        } else {
+            limit = 0;
+        }
     }
     return res.send(results);
 }
