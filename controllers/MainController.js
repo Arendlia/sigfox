@@ -5,13 +5,11 @@ exports.home = async (req, res) => {
 }
 
 exports.homePost = async (req, res) => {
-    console.log(req);
     const id = req.body.id;
     res.redirect('/sensor/'+id);
 }
 
 exports.sensor = async (req, res) => {
-    console.log('top')
     try {
         let result = await axios({
             'method': 'GET',
@@ -27,38 +25,20 @@ exports.sensor = async (req, res) => {
         });
         return res.render('sensor', {'sensor': result.data});
     } catch (e) {
-        
+        if (e.response.status == 500) {
+            return res.render('errors/errorServer');
+        }  
+        if (e.response.status == 429) {
+            return res.render('errors/tooManyRequests');
+        }  
     }
 }
 
-exports.getFirstMessage = async (req, res) => {
-    let url = process.env.API_URL+'/devices/'+req.params.id+'/messages?limit1';
-    let results = await axios({
-        'method': 'GET',
-        'url': url,
-        'headers': 
-        {
-            'Content-Type': 'application/json'
-        },
-        'auth': {
-            'username': process.env.API_USERNAME,
-            'password': process.env.API_PASSWORD
-        }
-    });
-    return res.send(results.data)
-}
-
-exports.sensorMessagesAjax = async (req, res) => {
-    let results = [];
-    let url = process.env.API_URL+'/devices/'+req.params.id+'/messages';
-    let result = {};
-    while (url) {
-        if (result != {}) {
-            await new Promise(r => setTimeout(r, 1000));
-        }
+async function getMessages(sensor, limit, offset = 0) {
+    try {
         result = await axios({
             'method': 'GET',
-            'url': url,
+            'url': `${process.env.API_URL}/devices/${sensor}/messages?offset=${offset}&limit=${limit}`,
             'headers': 
             {
                 'Content-Type': 'application/json'
@@ -67,10 +47,39 @@ exports.sensorMessagesAjax = async (req, res) => {
                 'username': process.env.API_USERNAME,
                 'password': process.env.API_PASSWORD
             }
-        });
-        console.log(result.status);
-        results.push(result?.data?.data);
-        url = result?.data?.paging?.next ?? null;
+        })
+        return {"data": result?.data?.data, "next": result?.data?.paging?.next, "status": result.status};
+    } catch (error) {
+        return {'error': error.response.data.message, 'status': error.response.status}
+    }
+}
+
+exports.getLastMessage = async(req, res) => {
+    messages = await getMessages(req.params.id, 1);
+    if (messages.error) {
+        return res.send(messages);
+    }
+    return res.send(messages.data);
+}
+
+exports.getAllMessages = async (req, res) => {
+    let results = [];
+    let limit = 100;
+    let offset = 0;
+    while (limit == 100) {
+        if (offset != 0) {
+            await new Promise(r => setTimeout(r, 1000));
+        }
+        messages = await getMessages(req.params.id, limit, offset);
+        if (messages.error) {
+            return res.send(messages);
+        }
+        if (messages?.next) {
+            offset = offset+limit;
+        } else {
+            limit = 0;
+        }
+        results.push(messages?.data);
     }
     return res.send(results);
 }
