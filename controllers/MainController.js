@@ -11,23 +11,24 @@ exports.homePost = async (req, res) => {
 
 exports.sensor = async (req, res) => {
     try {
-        let result = await axios({
-            'method': 'GET',
-            'url': process.env.API_URL+'/devices/'+req.params.id,
-            'headers': 
-            {
-                'Content-Type': 'application/json'
-            },
-            'auth': {
-                'username': process.env.API_USERNAME,
-                'password': process.env.API_PASSWORD
-            }
-        });
+        // let result = await axios({
+        //     'method': 'GET',
+        //     'url': process.env.API_URL+'/devices/'+req.params.id,
+        //     'headers': 
+        //     {
+        //         'Content-Type': 'application/json'
+        //     },
+        //     'auth': {
+        //         'username': process.env.API_USERNAME,
+        //         'password': process.env.API_PASSWORD
+        //     }
+        // });
         // TODO route capteur mauvais groupe
         // if (result.data.group.id != process.env.SENSOR_GROUP) {
         //     return res.render('badsensor', {'sensor': result.data});
         // }
-        return res.render('sensor', {'sensor': result.data});
+        return res.render('sensor', {'sensor': {"id": "test", "name": "B-keep15422"}});
+        // return res.render('sensor', {'sensor': result.data}); 
     } catch (e) {
         if (e.response.status == 500) {
             return res.render('errors/errorServer');
@@ -83,7 +84,7 @@ exports.getAllMessages = async (req, res) => {
         } else {
             limit = 0;
         }
-        results.push(messages?.data);
+        results.push(...messages.data);
     }
     return res.send(results);
 }

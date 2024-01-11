@@ -1,5 +1,6 @@
 <%- include('layout/header') -%>
 
+
 Capteur: <%= sensor.id %>
 
 <% if (sensor.name.includes("B-keep")) { %>
@@ -7,5 +8,17 @@ Capteur: <%= sensor.id %>
 <% } else if (sensor.name.includes("B-swarm")) { %>
     Type: B-Swarm
 <% } %>
+
+<div id="temperaturechart" style="width: 100%; height: 300px"></div>
+<div id="humiditychart" style="width: 100%; height: 300px"></div>
+<button class="periodbutton" data-period="1">Jour</button>
+<button class="periodbutton" data-period="7">Semaine</button>
+<button class="periodbutton" data-period="30">Mois</button>
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="/js/generateRandomData.js"></script>
+<script src="/js/temperaturechart.js"></script>
+<script src="/js/humiditychart.js"></script>
 
 <%- include('layout/footer') -%>
