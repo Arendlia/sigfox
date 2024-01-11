@@ -1,12 +1,10 @@
-// Import controller
+
 const MainController = require('../controllers/MainController');
 const errorController = require('../controllers/ErrorController');
 const notFoundController = require('../controllers/NotFoundController');
 const forbiddenController = require('../controllers/ForbiddenController');
 const badRequestController = require('../controllers/BadRequestController');
-// Import middlewares
 const errorHandler = require('../middlewares/errorHandler');
-// const middleware = require('../middleware/middleware');
 module.exports = (app) => {
     app.group("/", (router) => {
         router.get("/", MainController.home);
@@ -14,8 +12,8 @@ module.exports = (app) => {
     });
     app.group("/sensor", (router) => {
         router.get("/:id", MainController.sensor);
-        router.get('/:id/firstmessageajax', MainController.sensorMessagesAjax); // Create
-        router.get('/:id/messagesajax', MainController.sensorMessagesAjax); // Create
+        router.get('/:id/last-message', MainController.getLastMessage); // Create
+        router.get('/:id/messages', MainController.getAllMessages); // Create
     })
     app.group("/errors", (router) => {
         router.get("/forbidden", errorHandler, forbiddenController.renderForbiddenPage);

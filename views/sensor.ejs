@@ -1,6 +1,8 @@
 <%- include('layout/header') -%>
 
+
 Capteur: <%= sensor.id %>
+
 
 
 <% if (sensor.name.includes("B-keep")) { %>
@@ -8,5 +10,21 @@ Capteur: <%= sensor.id %>
 <% } else if (sensor.name.includes("B-swarm")) { %>
     Type: B-Swarm
 <% } %>
+<div id="derniers-elements"></div>
+<div id="time"></div>
+<div id="data"></div>
 
+<table class="table table-stripted">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Température</th>
+            <th>Humidité</th>
+            <th>Batterie</th>
+        </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+</table>
+
+<script type="module" src="/js/getDataByJson.mjs"></script>
 <%- include('layout/footer') -%>

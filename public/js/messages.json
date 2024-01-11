@@ -1,0 +1,1920 @@
+[{
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704893233000,
+    "data": "6c015a00",
+    "rolloverCounter": 0,
+    "seqNumber": 2066,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 2
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704887635000,
+    "data": "27015a00",
+    "rolloverCounter": 0,
+    "seqNumber": 2065,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704882024000,
+    "data": "ac005a00",
+    "rolloverCounter": 0,
+    "seqNumber": 2064,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704876399000,
+    "data": "efff5a00",
+    "rolloverCounter": 0,
+    "seqNumber": 2063,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704870761000,
+    "data": "deff5a00",
+    "rolloverCounter": 0,
+    "seqNumber": 2062,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704865125000,
+    "data": "17005a00",
+    "rolloverCounter": 0,
+    "seqNumber": 2061,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704859492000,
+    "data": "07005a00",
+    "rolloverCounter": 0,
+    "seqNumber": 2060,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704853860000,
+    "data": "f6ff5900",
+    "rolloverCounter": 0,
+    "seqNumber": 2059,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704848225000,
+    "data": "fcff5900",
+    "rolloverCounter": 0,
+    "seqNumber": 2058,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704842592000,
+    "data": "0900598a",
+    "rolloverCounter": 0,
+    "seqNumber": 2057,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704836958000,
+    "data": "1b005900",
+    "rolloverCounter": 0,
+    "seqNumber": 2056,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704831327000,
+    "data": "33005900",
+    "rolloverCounter": 0,
+    "seqNumber": 2055,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704825698000,
+    "data": "47005800",
+    "rolloverCounter": 0,
+    "seqNumber": 2054,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704820074000,
+    "data": "5e005800",
+    "rolloverCounter": 0,
+    "seqNumber": 2053,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704814452000,
+    "data": "c5005800",
+    "rolloverCounter": 0,
+    "seqNumber": 2052,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704808845000,
+    "data": "3e015700",
+    "rolloverCounter": 0,
+    "seqNumber": 2051,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704803253000,
+    "data": "55015800",
+    "rolloverCounter": 0,
+    "seqNumber": 2050,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704797656000,
+    "data": "1e015800",
+    "rolloverCounter": 0,
+    "seqNumber": 2049,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704792039000,
+    "data": "4b005800",
+    "rolloverCounter": 0,
+    "seqNumber": 2048,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704786410000,
+    "data": "0b005800",
+    "rolloverCounter": 0,
+    "seqNumber": 2047,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704780774000,
+    "data": "01005700",
+    "rolloverCounter": 0,
+    "seqNumber": 2046,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704775140000,
+    "data": "feff578a",
+    "rolloverCounter": 0,
+    "seqNumber": 2045,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704769505000,
+    "data": "ffff5700",
+    "rolloverCounter": 0,
+    "seqNumber": 2044,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704763871000,
+    "data": "ffff5700",
+    "rolloverCounter": 0,
+    "seqNumber": 2043,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704758238000,
+    "data": "08005600",
+    "rolloverCounter": 0,
+    "seqNumber": 2042,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704752605000,
+    "data": "2b005600",
+    "rolloverCounter": 0,
+    "seqNumber": 2041,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704746973000,
+    "data": "31005500",
+    "rolloverCounter": 0,
+    "seqNumber": 2040,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704741345000,
+    "data": "43005400",
+    "rolloverCounter": 0,
+    "seqNumber": 2039,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704735722000,
+    "data": "8d005300",
+    "rolloverCounter": 0,
+    "seqNumber": 2038,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704724527000,
+    "data": "f5025000",
+    "rolloverCounter": 0,
+    "seqNumber": 2036,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704719013000,
+    "data": "43084d00",
+    "rolloverCounter": 0,
+    "seqNumber": 2035,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704713546000,
+    "data": "61035800",
+    "rolloverCounter": 0,
+    "seqNumber": 2034,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704707980000,
+    "data": "2202578a",
+    "rolloverCounter": 0,
+    "seqNumber": 2033,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704702377000,
+    "data": "19005800",
+    "rolloverCounter": 0,
+    "seqNumber": 2032,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704696759000,
+    "data": "4b015800",
+    "rolloverCounter": 0,
+    "seqNumber": 2031,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704691165000,
+    "data": "bd015800",
+    "rolloverCounter": 0,
+    "seqNumber": 2030,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704685574000,
+    "data": "98015700",
+    "rolloverCounter": 0,
+    "seqNumber": 2029,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704679979000,
+    "data": "ad015700",
+    "rolloverCounter": 0,
+    "seqNumber": 2028,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704674391000,
+    "data": "bd015600",
+    "rolloverCounter": 0,
+    "seqNumber": 2027,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704668800000,
+    "data": "a8015600",
+    "rolloverCounter": 0,
+    "seqNumber": 2026,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704663203000,
+    "data": "d4005400",
+    "rolloverCounter": 0,
+    "seqNumber": 2025,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 1,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704657599000,
+    "data": "a5015400",
+    "rolloverCounter": 0,
+    "seqNumber": 2024,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704652011000,
+    "data": "ef015300",
+    "rolloverCounter": 0,
+    "seqNumber": 2023,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704646432000,
+    "data": "3e025000",
+    "rolloverCounter": 0,
+    "seqNumber": 2022,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704640876000,
+    "data": "a6044c8a",
+    "rolloverCounter": 0,
+    "seqNumber": 2021,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704635380000,
+    "data": "c8084700",
+    "rolloverCounter": 0,
+    "seqNumber": 2020,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704629949000,
+    "data": "bb064b00",
+    "rolloverCounter": 0,
+    "seqNumber": 2019,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704624456000,
+    "data": "5a044d00",
+    "rolloverCounter": 0,
+    "seqNumber": 2018,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 1,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1,
+    "lqiRepeaters": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704618890000,
+    "data": "d3004800",
+    "rolloverCounter": 0,
+    "seqNumber": 2017,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704613273000,
+    "data": "d5004800",
+    "rolloverCounter": 0,
+    "seqNumber": 2016,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704607662000,
+    "data": "fd004800",
+    "rolloverCounter": 0,
+    "seqNumber": 2015,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704602057000,
+    "data": "45014800",
+    "rolloverCounter": 0,
+    "seqNumber": 2014,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704585311000,
+    "data": "ed024800",
+    "rolloverCounter": 0,
+    "seqNumber": 2011,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704574230000,
+    "data": "8304498a",
+    "rolloverCounter": 0,
+    "seqNumber": 2009,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704568715000,
+    "data": "77054900",
+    "rolloverCounter": 0,
+    "seqNumber": 2008,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704436335000,
+    "data": "a5024b00",
+    "rolloverCounter": 0,
+    "seqNumber": 1984,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704375609000,
+    "data": "10064c8a",
+    "rolloverCounter": 0,
+    "seqNumber": 1973,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704364607000,
+    "data": "6d044c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1971,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 1,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704298342000,
+    "data": "47064c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1959,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704248760000,
+    "data": "ad044c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1950,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704155092000,
+    "data": "3f054c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1933,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704133115000,
+    "data": "26064b00",
+    "rolloverCounter": 0,
+    "seqNumber": 1929,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704111235000,
+    "data": "3e054b8a",
+    "rolloverCounter": 0,
+    "seqNumber": 1925,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 1,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704105711000,
+    "data": "9a034b00",
+    "rolloverCounter": 0,
+    "seqNumber": 1924,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704100157000,
+    "data": "f4024b00",
+    "rolloverCounter": 0,
+    "seqNumber": 1923,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704089041000,
+    "data": "ff024b00",
+    "rolloverCounter": 0,
+    "seqNumber": 1921,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1704066849000,
+    "data": "07044b00",
+    "rolloverCounter": 0,
+    "seqNumber": 1917,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703973213000,
+    "data": "74054c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1900,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703967721000,
+    "data": "b1054c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1899,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703956750000,
+    "data": "80064c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1897,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703945828000,
+    "data": "fd064c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1895,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703940349000,
+    "data": "08064c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1894,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703929338000,
+    "data": "63044c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1892,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703923814000,
+    "data": "3f044b00",
+    "rolloverCounter": 0,
+    "seqNumber": 1891,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703874189000,
+    "data": "85064c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1882,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703846874000,
+    "data": "6f044c8b",
+    "rolloverCounter": 0,
+    "seqNumber": 1877,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703835787000,
+    "data": "57034c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1875,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703830242000,
+    "data": "70034c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1874,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703824695000,
+    "data": "7e034c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1873,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703819147000,
+    "data": "94034c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1872,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 1,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703791500000,
+    "data": "01054c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1867,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703780514000,
+    "data": "42064d8b",
+    "rolloverCounter": 0,
+    "seqNumber": 1865,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703775039000,
+    "data": "52064d00",
+    "rolloverCounter": 0,
+    "seqNumber": 1864,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703769553000,
+    "data": "a4054d00",
+    "rolloverCounter": 0,
+    "seqNumber": 1863,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 1,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703764046000,
+    "data": "93044c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1862,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 1,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703747466000,
+    "data": "22044c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1859,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703741938000,
+    "data": "28044c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1858,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703730885000,
+    "data": "5e044c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1856,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703725360000,
+    "data": "71044c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1855,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703697747000,
+    "data": "7e044c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1850,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703692228000,
+    "data": "a0044c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1849,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 1,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703686714000,
+    "data": "99044c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1848,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703681190000,
+    "data": "72044b00",
+    "rolloverCounter": 0,
+    "seqNumber": 1847,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703675664000,
+    "data": "18044b00",
+    "rolloverCounter": 0,
+    "seqNumber": 1846,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703670129000,
+    "data": "db034b00",
+    "rolloverCounter": 0,
+    "seqNumber": 1845,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703664595000,
+    "data": "04044b00",
+    "rolloverCounter": 0,
+    "seqNumber": 1844,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703659065000,
+    "data": "44044b00",
+    "rolloverCounter": 0,
+    "seqNumber": 1843,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 1
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703653543000,
+    "data": "78044b00",
+    "rolloverCounter": 0,
+    "seqNumber": 1842,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703648021000,
+    "data": "a5044b8b",
+    "rolloverCounter": 0,
+    "seqNumber": 1841,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703642510000,
+    "data": "d9044c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1840,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703636999000,
+    "data": "15054c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1839,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703631494000,
+    "data": "53054c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1838,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703620504000,
+    "data": "e3054c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1836,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703615022000,
+    "data": "44064c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1835,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703609549000,
+    "data": "c5064c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1834,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703604087000,
+    "data": "3f074c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1833,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703598634000,
+    "data": "40074c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1832,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703593164000,
+    "data": "d5054c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1831,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703587657000,
+    "data": "91044c00",
+    "rolloverCounter": 0,
+    "seqNumber": 1830,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703582127000,
+    "data": "e3034b8b",
+    "rolloverCounter": 0,
+    "seqNumber": 1829,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703571052000,
+    "data": "f3034b00",
+    "rolloverCounter": 0,
+    "seqNumber": 1827,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 1,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703521442000,
+    "data": "21064b00",
+    "rolloverCounter": 0,
+    "seqNumber": 1818,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703493981000,
+    "data": "16054b00",
+    "rolloverCounter": 0,
+    "seqNumber": 1813,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703461001000,
+    "data": "27064a00",
+    "rolloverCounter": 0,
+    "seqNumber": 1807,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703455520000,
+    "data": "85064a00",
+    "rolloverCounter": 0,
+    "seqNumber": 1806,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1703450052000,
+    "data": "16074b8b",
+    "rolloverCounter": 0,
+    "seqNumber": 1805,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 1,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1702998468000,
+    "data": "79044b00",
+    "rolloverCounter": 0,
+    "seqNumber": 1723,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1702892827000,
+    "data": "a5014800",
+    "rolloverCounter": 0,
+    "seqNumber": 1704,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1702798053000,
+    "data": "7c024800",
+    "rolloverCounter": 0,
+    "seqNumber": 1687,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1702792481000,
+    "data": "a2024700",
+    "rolloverCounter": 0,
+    "seqNumber": 1686,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 1,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1702775801000,
+    "data": "38034700",
+    "rolloverCounter": 0,
+    "seqNumber": 1683,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1702698428000,
+    "data": "7a014800",
+    "rolloverCounter": 0,
+    "seqNumber": 1669,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1702665123000,
+    "data": "ce054a00",
+    "rolloverCounter": 0,
+    "seqNumber": 1663,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1702648742000,
+    "data": "7a074a00",
+    "rolloverCounter": 0,
+    "seqNumber": 1660,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1702632197000,
+    "data": "32034a00",
+    "rolloverCounter": 0,
+    "seqNumber": 1657,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1702626641000,
+    "data": "2c034a00",
+    "rolloverCounter": 0,
+    "seqNumber": 1656,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1702621092000,
+    "data": "64034a00",
+    "rolloverCounter": 0,
+    "seqNumber": 1655,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1702615542000,
+    "data": "85034a00",
+    "rolloverCounter": 0,
+    "seqNumber": 1654,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1702609998000,
+    "data": "a5034a00",
+    "rolloverCounter": 0,
+    "seqNumber": 1653,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1702604460000,
+    "data": "ec034a00",
+    "rolloverCounter": 0,
+    "seqNumber": 1652,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1702598925000,
+    "data": "fe034a00",
+    "rolloverCounter": 0,
+    "seqNumber": 1651,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 1,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1702582344000,
+    "data": "64044a00",
+    "rolloverCounter": 0,
+    "seqNumber": 1648,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1702449718000,
+    "data": "e7034a00",
+    "rolloverCounter": 0,
+    "seqNumber": 1624,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1702416584000,
+    "data": "3e054a00",
+    "rolloverCounter": 0,
+    "seqNumber": 1618,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1702339774000,
+    "data": "98054a00",
+    "rolloverCounter": 0,
+    "seqNumber": 1604,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1702334277000,
+    "data": "9c054a00",
+    "rolloverCounter": 0,
+    "seqNumber": 1603,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}, {
+    "device": {
+        "id": "30EFFB"
+    },
+    "time": 1702323291000,
+    "data": "c0054a8c",
+    "rolloverCounter": 0,
+    "seqNumber": 1601,
+    "rinfos": [],
+    "satInfos": [],
+    "nbFrames": 3,
+    "operator": "SIGFOX_France",
+    "country": "FRA",
+    "lqi": 0
+}]

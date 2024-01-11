@@ -5,11 +5,12 @@
  * 
  * let date = convert(344954003)
  * 
- * @param {*} timestamp 
- * @returns 
+ * @param {timestamp} timestamp 
+ * @returns results
  */
-
+ 
 function convertTimestampToDatetime(timestamp) {
+    
     let date = new Date(timestamp);
     const result = date.toLocaleDateString("fr-FR", {
         year: "numeric",
