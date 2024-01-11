@@ -1,4 +1,3 @@
-const convertTimestampToDatetime = require("./convertDate");
 /**
  * Fonction convertDateAndHexa
  * 
@@ -8,8 +7,7 @@ const convertTimestampToDatetime = require("./convertDate");
  * @param {*} value 
  * @returns {Array}
  */
-function convertDateAndHexa(timestamp, value) {
-    const result = convertTimestampToDatetime(timestamp);
+function convertHexa(timestamp, value) {
     // Convert hexa
     const hexaT = parseInt(value.slice(0, 4), 16);
     const hexaH = parseInt(value.slice(4, 6), 16);
@@ -17,6 +15,8 @@ function convertDateAndHexa(timestamp, value) {
     const hexaString = hexaT.toString();
     const t = hexaString.slice(0, 4);
 
-    const tabData = {'d': result ,'t': parseInt(t) / 100, 'h': hexaH, 'b': hexaB/150 * 100 };
+    const tabData = {'date': timestamp ,'temperature': parseInt(t) / 100, 'humidity': hexaH, 'battery': hexaB/150 * 100 };
     return tabData;
 }
+
+module.exports = convertHexa;

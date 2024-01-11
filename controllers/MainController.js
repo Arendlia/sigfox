@@ -1,5 +1,5 @@
 let axios = require('axios');
-let convertDateAndHexa = require('../Function/convertDateAndHexa');
+let convertHexa = require('../function/convertHexa');
 
 exports.home = async (req, res) => {
     return res.render('search');
@@ -54,7 +54,6 @@ async function getMessages(sensor, limit, offset = 0) {
                 'password': process.env.API_PASSWORD
             }
         })
-        console.log(result);
         return {"data": result?.data?.data, "next": result?.data?.paging?.next, "status": result.status};
     } catch (error) {
         return {'error': error.response.data.message, 'status': error.response.status}
@@ -87,12 +86,10 @@ exports.getAllMessages = async (req, res) => {
         } else {
             limit = 0;
         }
-        console.log(messages);
-        results.push(messages?.data);     
+        results.push(...messages?.data);     
     }
     results.forEach((data) => {
-        tabNewData.push(convertDateAndHexa(data.time, data.data))
+        tabNewData.push(convertHexa(data.time, data.data))
     })
-    console.log(tabNewData);
     return res.send(tabNewData);
 }
