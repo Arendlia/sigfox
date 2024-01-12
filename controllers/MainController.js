@@ -32,10 +32,10 @@ exports.sensor = async (req, res) => {
         return res.render('sensor', {'sensor': result.data});
     } catch (e) {
         if (e.response.status == 500) {
-            return res.render('errors/errorServer');
+            res.redirect('/error/error-internal')
         }  
         if (e.response.status == 429) {
-            return res.render('errors/tooManyRequests');
+            res.redirect('/error/too-many-requests')
         }  
     }
 }
