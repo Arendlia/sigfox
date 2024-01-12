@@ -1,5 +1,9 @@
+const inverserOrdreOctets = require('./invertHexa');
+
 function convertHexaTojson(value) {
-    const hexaT = parseInt(value.slice(0, 4), 16);
+    const hexInverse = inverserOrdreOctets(value.slice(0, 4));
+    //console.log(hexInverse);
+    const hexaT = parseInt(hexInverse, 16);
     const hexaH = parseInt(value.slice(4, 6), 16);
     const hexaB = parseInt(value.slice(6, 8), 16);
     const hexaString = hexaT.toString();
