@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 :root {
     --primary-color: #D6A96E;
     --background-color: #EFEFEF;
@@ -8,6 +8,9 @@
     --success-color: #76AA75;
     --text-color: #646464;
 
+    --font-family: 'Roboto';
+
     --regular-font-weight: 400;
-    --bold-font-weight: 900;
+    --bold-font-weight: 700;
+    --extra-bold-font-weight: 900;
   }
