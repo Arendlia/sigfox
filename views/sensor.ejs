@@ -4,48 +4,48 @@
             <div class="p-2 bd-highlight w-100">
                 <div class="card small-card item-background border-none shadow">
                     <div class="card-body">
-                      <div class="d-flex justify-content-between">
-                        <p class="card-text"><span class="text-text">Capteur | </span><span class="bold">30EFFB7</span></p>
-                        <p class="card-text"><span class="text-text">Type | </span><span class="bold">Bkeep</span></p>
-                      </div>
-                      <div class="d-flex justify-content-around">
-                        <div class="d-flex flex-column">
-                            <i class="fa-solid fa-temperature-three-quarters icon"></i>
-                            <span class="text-center text-text">Température</span>
-                            <span class="text-center bold"><span id="temperatureData">-3</span>C°</span>
+                        <div class="d-flex justify-content-between">
+                            <p class="card-text"><span class="text-text">Capteur | </span><span class="bold"><%= sensor.id %></span></p>
+                            <p class="card-text"><span class="text-text">Type | </span><span class="bold"><%= sensor.name %></span></p>
                         </div>
-                        <% if (sensor.deviceType.id == 1) { %>
-                        <div class="d-flex flex-column">
-                            <i class="fa-solid fa-droplet icon"></i>
-                            <span class="text-center text-text">Humidité</span>
-                            <span class="text-center bold"><span id="humidityData">70</span>%</span>
-                        </div>
-                        <div class="d-flex flex-column">
-                            <i class="fa-solid fa-battery-three-quarters icon"></i>
-                            <span class="text-center text-text">Batterie</span>
-                            <span class="text-center bold"><span id="batteryData">51</span>%</span>
-                        </div>
-                        <% } else if (sensor.deviceType==2) { %>
+                        <div class="d-flex justify-content-around">
                             <div class="d-flex flex-column">
-                                <i class="fa-solid fa-map-location-dot icon"></i>
-                                <span class="text-center text-text">Latitude</span>
-                                <span class="text-center">49,543</span>
+                                <i class="fa-solid fa-temperature-three-quarters icon"></i>
+                                <span class="text-center text-text">Température</span>
+                                <span class="text-center bold"><span id="temperatureData">-3</span>C°</span>
+                            </div>
+                            <% if (sensor.deviceType.id == 1) { %>
+                            <div class="d-flex flex-column">
+                                <i class="fa-solid fa-droplet icon"></i>
+                                <span class="text-center text-text">Humidité</span>
+                                <span class="text-center bold"><span id="humidityData">70</span>%</span>
                             </div>
                             <div class="d-flex flex-column">
-                                <i class="fa-solid fa-map-location-dot icon"></i>
-                                <span class="text-center text-text">Longitude</span>
-                                <span class="text-center">34,594</span>
+                                <i class="fa-solid fa-battery-three-quarters icon"></i>
+                                <span class="text-center text-text">Batterie</span>
+                                <span class="text-center bold"><span id="batteryData">51</span>%</span>
                             </div>
-                        <% } %>
-                        <div class="d-flex flex-column">
-                            <i class="fa-solid fa-wifi icon"></i>
-                            <span class="text-center text-text">Connexion</span>
-                            <span id="dataWifi" class="text-center bold">Très Bonne</span>
+                            <% } else if (sensor.deviceType==2) { %>
+                                <div class="d-flex flex-column">
+                                    <i class="fa-solid fa-map-location-dot icon"></i>
+                                    <span class="text-center text-text">Latitude</span>
+                                    <span class="text-center">49,543</span>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <i class="fa-solid fa-map-location-dot icon"></i>
+                                    <span class="text-center text-text">Longitude</span>
+                                    <span class="text-center">34,594</span>
+                                </div>
+                            <% } %>
+                            <% lqi = ['Limitée', 'Bonne', 'Très bonne', 'Très bonne', 'Non disponible'] %>
+                            <div class="d-flex flex-column">
+                                <i class="fa-solid fa-wifi icon"></i>
+                                <span class="text-center text-text">Connexion</span>
+                                <span id="dataWifi" class="text-center bold"><%= lqi[sensor.lqi] %></span>
+                            </div>
                         </div>
-                        
-                      </div>
                     </div>
-                  </div>
+                </div>
             </div>
             <div class="p-2 bd-highlight w-100">
                 <div class="card small-card filtre-card item-background border-none shadow">
