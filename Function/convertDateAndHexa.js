@@ -20,3 +20,5 @@ function convertDateAndHexa(timestamp, value) {
     const tabData = {'d': result ,'t': parseInt(t) / 100, 'h': hexaH, 'b': hexaB/150 * 100 };
     return tabData;
 }
+
+module.exports = convertDateAndHexa;

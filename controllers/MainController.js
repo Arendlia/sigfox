@@ -87,12 +87,10 @@ exports.getAllMessages = async (req, res) => {
         } else {
             limit = 0;
         }
-        console.log(messages);
-        results.push(messages?.data);     
+        results.push(...messages?.data);     
     }
     results.forEach((data) => {
         tabNewData.push(convertDateAndHexa(data.time, data.data))
     })
-    console.log(tabNewData);
     return res.send(tabNewData);
 }
