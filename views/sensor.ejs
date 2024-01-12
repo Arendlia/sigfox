@@ -52,9 +52,9 @@
                     <div class="card-body">
                       <p class="card-text bold">Filtres</p>
                       <div class="justify-content-between mb-3 group-of-buttons">
-                        <button type="button" id="day" class="btn btn-secondary w-100 border-none primary-background item-text">1 jour</button>
-                        <button type="button" id="week" class="btn btn-secondary w-100 mx-4 border-none primary-background item-text">1 semaine</button>
-                        <button type="button" id="mounth" class="btn btn-secondary w-100 border-none primary-background item-text">1 mois</button>
+                        <button type="button" id="day"  class="btn btn-secondary w-100 border-none primary-background item-text periodbutton" data-period="1">1 jour</button>
+                        <button type="button" id="week" class="btn btn-secondary w-100 mx-4 border-none primary-background item-text periodbutton" data-period="7">1 semaine</button>
+                        <button type="button" id="mounth" class="btn btn-secondary w-100 border-none primary-background item-text periodbutton" data-period="30">1 mois</button>
                       </div>
                       <div id="daterange" class="justify-content-between" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
                         <div>
@@ -63,7 +63,6 @@
                         </div>
                         <i class="fa fa-caret-down"></i>
                       </div>
-
                       <div id="daterange-mobile" class="justify-content-between" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
                         <div>
                           <i class="fa fa-calendar"></i>&nbsp;
@@ -91,6 +90,7 @@
                   <div class="d-flex justify-content-between">
                     <p class="card-text"><span class="bold">Historique de la température</span></p>
                   </div>
+                  <div id="temperaturechart" style="width: 100%; height: 300px"></div>
                 </div>
               </div>
             </div>
@@ -101,6 +101,7 @@
                     <div class="d-flex justify-content-between">
                       <p class="card-text"><span class="bold">Historique de l'humidité</span></p>
                     </div>
+                    <div id="humiditychart" style="width: 100%; height: 300px"></div>
                   </div>
                 </div>
               </div>
@@ -108,8 +109,14 @@
           </div>
       </div>
 
-<%- include('layout/footer') -%>
 <script type="text/javascript" src="/js/moment.min.js"></script>
 <script type="text/javascript" src="/js/daterangepicker.js"></script>
 <script type="text/javascript" src="/js/daterange.js"></script>
 <script type="text/javascript" src="/js/bornes.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="/js/generateRandomData.js"></script>
+<script src="/js/temperaturechart.js"></script>
+<script src="/js/humiditychart.js"></script>
+<%- include('layout/footer') -%>
