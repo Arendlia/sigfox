@@ -10,7 +10,6 @@ function convertHexaTojson(value) {
     const t = hexaString.slice(0, 4);
 
     const tabData = {'t': parseInt(t) / 100, 'h': hexaH, 'b': hexaB/150 * 100 };
-    //console.log(tabData);
     return tabData;
     // Cela affichera la chaîne de caractères correspondante
 }
