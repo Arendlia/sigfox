@@ -66,12 +66,12 @@ body{
 }
 
 .error-title{
-    font-size: 40px;
+    font-size: 20px;
 }
 
 .error-type{
-    font-size: 150px;
-    font-weight: var(--extrat-bold-font-weight);
+    font-size: 120px;
+    font-weight: var(--extra-bold-font-weight);
 }
 
 .bold {

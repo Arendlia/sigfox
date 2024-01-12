@@ -1,16 +1,12 @@
-<!-- views/forbidden.ejs -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forbidden</title>
-    <!-- styles... -->
-</head>
-<body>
-    <div class="error-container">
-        <h1>Error 403</h1>
-        <p>Access Forbidden</p>
+<!-- views/notFound.ejs -->
+<%- include('../layout/header') -%>
+    <div class="error-container background-svg">
+        <div class="card card-center shadow">
+            <div class="card-body p-5 text-center">
+                <p class="error-title text-text">Une erreur est survenue</p>
+                <h1 class="error-type primary-text">403</h1>
+                <p class="error-title text-text">Access Forbiden</p>
+            </div>
+        </div>
     </div>
-</body>
-</html>
+<%- include('../layout/footer') -%>
