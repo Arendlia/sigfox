@@ -9,25 +9,12 @@
                             <p class="card-text"><span class="text-text">Type | </span><span class="bold"><%= sensor.name %></span></p>
                         </div>
                         <div class="d-flex justify-content-around">
-                            <% sensor.deviceType.id %>
-                            <% if (sensor.deviceType.id == 1) { %>
-                            <div class="d-flex flex-column">
-                                <i class="fa-solid fa-droplet icon"></i>
-                                <span class="text-center text-text">Humidité</span>
-                                <span class="text-center bold"><span id="humidityData">70</span>%</span>
-                            </div>
-                            <div class="d-flex flex-column">
-                                <i class="fa-solid fa-battery-three-quarters icon"></i>
-                                <span class="text-center text-text">Batterie</span>
-                                <span class="text-center bold"><span id="batteryData">51</span>%</span>
-                            </div>
-                            <% } else if (sensor.deviceType=="643d74c4e0b8bb55977b2e59") { %>
                             <div class="d-flex flex-column">
                                 <i class="fa-solid fa-temperature-three-quarters icon"></i>
                                 <span class="text-center text-text">Température</span>
                                 <span class="text-center bold"><span id="temperatureData">-3</span>C°</span>
                             </div>
-                            <% if (sensor.deviceType.id == 1) { %>
+                            <% if (sensor.deviceType.id == '643d74c4e0b8bb55977b2e59') { %>
                             <div class="d-flex flex-column">
                                 <i class="fa-solid fa-droplet icon"></i>
                                 <span class="text-center text-text">Humidité</span>
@@ -38,7 +25,7 @@
                                 <span class="text-center text-text">Batterie</span>
                                 <span class="text-center bold"><span id="batteryData">51</span>%</span>
                             </div>
-                            <% } else if (sensor.deviceType==2) { %>
+                            <% } else if (sensor.deviceType.id == '6445409bc69c3c4137aea1c7 ') { %>
                                 <div class="d-flex flex-column">
                                     <i class="fa-solid fa-map-location-dot icon"></i>
                                     <span class="text-center text-text">Latitude</span>
@@ -63,62 +50,62 @@
             <div class="p-2 bd-highlight w-100">
                 <div class="card small-card filtre-card item-background border-none shadow">
                     <div class="card-body">
-                      <p class="card-text bold">Filtres</p>
-                      <div class="justify-content-between mb-3 group-of-buttons">
-                        <button type="button" id="day"  class="btn btn-secondary w-100 border-none primary-background item-text periodbutton" data-period="1">1 jour</button>
-                        <button type="button" id="week" class="btn btn-secondary w-100 mx-4 border-none primary-background item-text periodbutton" data-period="7">1 semaine</button>
-                        <button type="button" id="mounth" class="btn btn-secondary w-100 border-none primary-background item-text periodbutton" data-period="30">1 mois</button>
-                      </div>
-                      <div id="daterange" class="justify-content-between" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
-                        <div>
-                          <i class="fa fa-calendar"></i>&nbsp;
-                          <span></span> 
+                        <p class="card-text bold">Filtres</p>
+                        <div class="justify-content-between mb-3 group-of-buttons">
+                            <button type="button" id="day"  class="btn btn-secondary w-100 border-none primary-background item-text periodbutton" data-period="1">1 jour</button>
+                            <button type="button" id="week" class="btn btn-secondary w-100 mx-4 border-none primary-background item-text periodbutton" data-period="7">1 semaine</button>
+                            <button type="button" id="mounth" class="btn btn-secondary w-100 border-none primary-background item-text periodbutton" data-period="30">1 mois</button>
                         </div>
-                        <i class="fa fa-caret-down"></i>
-                      </div>
-                      <div id="daterange-mobile" class="justify-content-between" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
-                        <div>
-                          <i class="fa fa-calendar"></i>&nbsp;
-                          <span></span> 
+                        <div id="daterange" class="justify-content-between" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                            <div>
+                            <i class="fa fa-calendar"></i>&nbsp;
+                            <span></span> 
+                            </div>
+                            <i class="fa fa-caret-down"></i>
                         </div>
-                        <i class="fa fa-caret-down"></i>
-                      </div>
+                        <div id="daterange-mobile" class="justify-content-between" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                            <div>
+                            <i class="fa fa-calendar"></i>&nbsp;
+                            <span></span> 
+                            </div>
+                            <i class="fa fa-caret-down"></i>
+                        </div>
+                        </div>
                     </div>
-                  </div>
-            </div>
-          </div>
-          <div class="d-flex bd-highlight mb-3 d-flex group-of-cards bd-highlight mb-3">
-            <% if (sensor.deviceType.id == 2) { %>
-            <div class="p-2 bd-highlight w-100">
-              <div class="card big-card item-background border-none shadow">
-                <div class="card-body">
-                    <p class="card-text"><span class="bold">Position du capteur</span></p>
                 </div>
-              </div>
             </div>
-            <% }%>
-            <div class="p-2 bd-highlight w-100">
-              <div class="card big-card item-background border-none shadow">
-                <div class="card-body">
-                  <div class="d-flex justify-content-between">
-                    <p class="card-text"><span class="bold">Historique de la température</span></p>
-                  </div>
-                  <div id="temperaturechart" style="width: 100%; height: 300px"></div>
-                </div>
-              </div>
-            </div>
-            <% if (sensor.deviceType.id == 1) { %>
-              <div class="p-2 bd-highlight w-100">
+            <div class="d-flex bd-highlight mb-3 d-flex group-of-cards bd-highlight mb-3">
+                <% if (sensor.deviceType.id == '6445409bc69c3c4137aea1c7') { %>
+                <div class="p-2 bd-highlight w-100">
                 <div class="card big-card item-background border-none shadow">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <p class="card-text"><span class="bold">Historique de l'humidité</span></p>
+                    <div class="card-body">
+                        <p class="card-text"><span class="bold">Position du capteur</span></p>
                     </div>
-                    <div id="humiditychart" style="width: 100%; height: 300px"></div>
-                  </div>
                 </div>
-              </div>
-              <% }%>
-          </div>
-      </div>
+                </div>
+                <% }%>
+                <div class="p-2 bd-highlight w-100">
+                <div class="card big-card item-background border-none shadow">
+                    <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <p class="card-text"><span class="bold">Historique de la température</span></p>
+                    </div>
+                    <div id="temperaturechart" style="width: 100%; height: 300px"></div>
+                    </div>
+                </div>
+                </div>
+                <% if (sensor.deviceType.id == '643d74c4e0b8bb55977b2e59') { %>
+                <div class="p-2 bd-highlight w-100">
+                    <div class="card big-card item-background border-none shadow">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                        <p class="card-text"><span class="bold">Historique de l'humidité</span></p>
+                        </div>
+                        <div id="humiditychart" style="width: 100%; height: 300px"></div>
+                    </div>
+                    </div>
+                </div>
+                <% }%>
+            </div>
+        </div>
 <%- include('layout/footer') -%>

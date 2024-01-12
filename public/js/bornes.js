@@ -62,14 +62,14 @@ $(function() {
         }
     }
     function connexion(){
-        if(dataValue == "Très Bonne" ){
-            $('.fa-wifi').addClass('text-success')
+        if(dataValue == "Limitée" ){
+            $('.fa-wifi').addClass('text-danger')
         }
-        if(dataValue == "Correcte"){
+        if(dataValue == "Bonne"){
             $('.fa-wifi').addClass('text-warning')
         }
-        if(dataValue == "Mauvaise"){
-            $('.fa-wifi').addClass('text-danger')
+        if(dataValue == "Très bonne"){
+            $('.fa-wifi').addClass('text-success')
         }
     }
     humidity()
