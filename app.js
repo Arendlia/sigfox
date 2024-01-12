@@ -8,6 +8,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(express.static("public"))
+app.use('/node_modules', express.static('node_modules'));
 
 require('./router/router')(app);
 

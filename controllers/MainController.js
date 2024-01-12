@@ -29,7 +29,7 @@ exports.sensor = async (req, res) => {
         //     return res.render('badsensor', {'sensor': result.data});
         // }
         
-        return res.render('sensor', {'sensor': result.data});
+        return res.render('sensor', {'sensor': result.data, 'apiUrl': process.env.API_URL});
     } catch (e) {
         if (e.response.status == 500) {
             res.redirect('/error/error-internal')

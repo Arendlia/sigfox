@@ -10,14 +10,17 @@ const inverserOrdreOctets = require("./invertHexa");
  */
 function convertHexa(timestamp, value) {
     const hexInverse = inverserOrdreOctets(value.slice(0, 4));
-    //console.log(hexInverse);
-    const hexaT = parseInt(hexInverse, 16);
+    const prefixedHexInverse = '0x' + hexInverse;
+    let hexaT = parseInt(prefixedHexInverse, 16);
+    // Get signed int
+    if ((hexaT & 0x8000) > 0) {
+        hexaT = hexaT - 0x10000;
+    }
     const hexaH = parseInt(value.slice(4, 6), 16);
     const hexaB = parseInt(value.slice(6, 8), 16);
     const hexaString = hexaT.toString();
-    const t = hexaString.slice(0, 4);
 
-    const tabData = {'date': timestamp ,'temperature': parseInt(t) / 100, 'humidity': hexaH, 'battery': hexaB/150 * 100 };
+    const tabData = {'date': timestamp ,'temperature': hexaT/100, 'humidity': hexaH, 'battery': hexaB/150 * 100 };
     return tabData;
 }
 
