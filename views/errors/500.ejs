@@ -1,16 +1,12 @@
 <!-- views/notFound.ejs -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internal server error</title>
-    <!-- styles... -->
-</head>
-<body>
-    <div class="error-container">
-        <h1>Error 500</h1>
-        <p>Internal server error</p>
+<%- include('../layout/header') -%>
+    <div class="error-container background-svg">
+        <div class="card card-center shadow">
+            <div class="card-body p-5 text-center">
+                <p class="error-title text-text">Une erreur est survenue</p>
+                <h1 class="error-type primary-text">500</h1>
+                <p class="error-title text-text">Internal Server Error</p>
+            </div>
+        </div>
     </div>
-</body>
-</html>
+<%- include('../layout/footer') -%>
