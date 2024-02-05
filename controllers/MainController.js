@@ -1,5 +1,6 @@
 let axios = require('axios');
 let convertHexa = require('../function/convertHexa');
+let moment = require('moment');
 
 exports.home = async (req, res) => {
     return res.render('search');
@@ -25,7 +26,8 @@ exports.sensor = async (req, res) => {
             }
         });
         
-        return res.render('sensor', {'sensor': result.data, 'apiUrl': process.env.API_URL});
+        moment.locale('fr');
+        return res.render('sensor', {'sensor': result.data, 'apiUrl': process.env.API_URL, moment: moment});
     } catch (e) {
         if (e.response.status == 500) {
             res.redirect('/error/error-internal')

@@ -45,6 +45,9 @@
                                 <span id="dataWifi" class="text-center bold"><%= lqi[sensor.lqi] %></span>
                             </div>
                         </div>
+                        <div class="d-flex justify-content-end mt-1">
+                            <span class="text-text"><%= moment(sensor.lastCom).format('Do MMMM YYYY à HH:MM'); %></span>
+                        </div>
                     </div>
                 </div>
             </div>
