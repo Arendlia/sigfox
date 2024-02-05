@@ -8,7 +8,8 @@
                             <p class="card-text"><span class="text-text">Capteur | </span><span class="bold" data-id="<%= sensor.id %>" id="sensorId"><%= sensor.id %></span></p>
                             <p class="card-text"><span class="text-text">Type | </span><span class="bold"><%= sensor.name %></span></p>
                         </div>
-                        <div class="d-flex justify-content-around">
+                        <div id="liveData" class="d-flex justify-content-around invisible">
+                            <img id="liveDataLoader" class="position-absolute visible h-50" src="/images/loading.svg" alt="chargement"/>
                             <div class="d-flex flex-column">
                                 <i class="fa-solid fa-temperature-three-quarters icon"></i>
                                 <span class="text-center text-text">Température</span>
