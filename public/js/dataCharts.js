@@ -24,11 +24,12 @@ axios({
 		datareversed = result.data.reverse();
 		$('#temperatureloading').removeClass('d-flex');
 		$('#temperatureloading').addClass('d-none');
+		$('#temperaturechart').removeClass('d-none');
 		temperatureseries = createChart('temperaturechart',	datareversed, 'temperature', '°C');
 		$('#humidityloading').removeClass('d-flex');
 		$('#humidityloading').addClass('d-none');
+		$('#humiditychart').removeClass('d-none');
 		humidityseries = createChart('humiditychart', datareversed, 'humidity', '%');
-
 		$('.periodbutton').each(function() {
 			$(this).on('click', function() {
 				let date = new Date();
@@ -39,6 +40,12 @@ axios({
 		})
 
 		$('#daterange').on('apply.daterangepicker', function(ev, picker) {
+			filteredData = filterDataByDate(datareversed, picker.startDate.toDate().getTime(), picker.endDate.toDate().getTime());
+			temperatureseries.data.setAll(filteredData);
+			humidityseries.data.setAll(filteredData)
+		})
+
+		$('#daterange-mobile').on('apply.daterangepicker', function(ev, picker) {
 			filteredData = filterDataByDate(datareversed, picker.startDate.toDate().getTime(), picker.endDate.toDate().getTime());
 			temperatureseries.data.setAll(filteredData);
 			humidityseries.data.setAll(filteredData)

@@ -28,11 +28,15 @@ var legend = L.control({position: 'topright'});
     legend.addTo(map);
 
 $("#legentBtn").click(function(){
-    console.log("log")
     if($("#collapse").hasClass("d-none")){
         $("#collapse").removeClass("d-none")
     }else{
         $("#collapse").addClass("d-none")
+    }
+    if($("#collapse-mobile").hasClass("d-none")){
+        $("#collapse-mobile").removeClass("d-none")
+    }else{
+        $("#collapse-mobile").addClass("d-none")
     }
     
   });
