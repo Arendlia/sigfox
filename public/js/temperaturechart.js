@@ -16,6 +16,10 @@ axios({
 		'method': 'GET',
 		'url': '/sensor/'+document.querySelector('#sensorId').dataset.id+'/messages'
 	}).then(function(result) {
+		$('#humidityData').text(result.data[0].humidity);
+		$('#temperatureData').text(result.data[0].temperature);
+		$('#batteryData').text(result.data[0].battery);
+		setColors();
 		datareversed = result.data.reverse();
 		document.getElementById('temperatureloading').classList.remove('d-flex');
 		document.getElementById('temperatureloading').classList.add('d-none');

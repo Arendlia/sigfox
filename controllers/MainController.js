@@ -1,5 +1,6 @@
 let axios = require('axios');
 let convertHexa = require('../function/convertHexa');
+let moment = require('moment');
 
 exports.home = async (req, res) => {
     return res.render('search');
@@ -24,12 +25,9 @@ exports.sensor = async (req, res) => {
                 'password': process.env.API_PASSWORD
             }
         });
-        // TODO route capteur mauvais groupe
-        // if (result.data.group.id != process.env.SENSOR_GROUP) {
-        //     return res.render('badsensor', {'sensor': result.data});
-        // }
         
-        return res.render('sensor', {'sensor': result.data, 'apiUrl': process.env.API_URL});
+        moment.locale('fr');
+        return res.render('sensor', {'sensor': result.data, 'apiUrl': process.env.API_URL, moment: moment});
     } catch (e) {
         if (e.response.status == 500) {
             res.redirect('/error/error-internal')
