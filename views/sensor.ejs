@@ -78,7 +78,11 @@
                     </div>
                 </div>
             </div>
-            <div class="d-flex bd-highlight mb-3 d-flex group-of-cards bd-highlight mb-3">
+            <% if (sensor.deviceType.id == '643d74c4e0b8bb55977b2e59') { %>
+                <div class="d-flex bd-highlight mb-3 d-flex group-of-cards bd-highlight mb-3">
+            <% }else if (sensor.deviceType.id == '6445409bc69c3c4137aea1c7') { %>
+                <div class="d-flex bd-highlight mb-3 d-flex group-of-cards-gps bd-highlight mb-3">
+                <% }%>
                 <% if (sensor.deviceType.id == '6445409bc69c3c4137aea1c7') { %>
                 <div class="p-2 bd-highlight w-100">
                     <div class="card big-card item-background border-none shadow">
@@ -112,10 +116,37 @@
                                     </li>
                                   </ul>
                           </div>
-                        </div>
                       </div>
-                
-                </div>
+                      <div id="collapse-mobile" class="d-none">
+                        <table class ="table">
+                            <thead>
+                                <tr>
+                                    <th class="col-8">Date</th>
+                                    <th class="col-4">Longitude</th>
+                                    <th class="col-4">Latitude</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">13 décembre - 14:00</th>
+                                    <td>49,543</td>
+                                    <td>34,594</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">13 décembre - 14:00</th>
+                                  <td>49,543</td>
+                                  <td>34,594</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">13 décembre - 14:00</th>
+                                    <td>49,543</td>
+                                    <td>34,594</td>
+                                </tr>
+                              </tbody>     
+                        </table>
+                    </div>
+                  </div>
+            </div>
                 <% }%>
                 <div class="p-2 bd-highlight w-100">
                 <div class="card big-card item-background border-none shadow">

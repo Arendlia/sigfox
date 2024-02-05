@@ -34,5 +34,10 @@ $("#legentBtn").click(function(){
     }else{
         $("#collapse").addClass("d-none")
     }
+    if($("#collapse-mobile").hasClass("d-none")){
+        $("#collapse-mobile").removeClass("d-none")
+    }else{
+        $("#collapse-mobile").addClass("d-none")
+    }
     
   });
