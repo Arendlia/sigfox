@@ -23,9 +23,11 @@ axios({
 		datareversed = result.data.reverse();
 		document.getElementById('temperatureloading').classList.remove('d-flex');
 		document.getElementById('temperatureloading').classList.add('d-none');
+		document.getElementById('temperaturechart').classList.remove('d-none');
 		temperatureseries = createChart('temperaturechart',	datareversed, 'temperature', '°C');
 		document.getElementById('humidityloading').classList.remove('d-flex');
 		document.getElementById('humidityloading').classList.add('d-none');
+		document.getElementById('humiditychart').classList.remove('d-none');
 		humidityseries = createChart('humiditychart', datareversed, 'humidity', '%');
 
 		document.querySelectorAll('.periodbutton').forEach((periodButton) => {
