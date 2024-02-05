@@ -25,7 +25,6 @@ exports.sensor = async (req, res) => {
                 'password': process.env.API_PASSWORD
             }
         });
-        
         moment.locale('fr');
         return res.render('sensor', {'sensor': result.data, 'apiUrl': process.env.API_URL, moment: moment});
     } catch (e) {
@@ -72,6 +71,7 @@ exports.getAllMessages = async (req, res) => {
     let limit = 100;
     let offset = 0;
     while (limit == 100) {
+        // Waiting 1s to make next call to bypass API cooldown
         if (offset != 0) {
             await new Promise(r => setTimeout(r, 1000));
         }
