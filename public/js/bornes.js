@@ -1,6 +1,3 @@
-
-
-
 const humidityBornes = {
     "minDanger": 10,
     "minWarning": 30,
