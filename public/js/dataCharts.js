@@ -1,9 +1,7 @@
 function filterDataByDate(dataArray, startDate, endDate) {
-	// Convert startDate and endDate to timestamps if they are not already
 	const startTimestamp = startDate instanceof Date ? startDate.getTime() : new Date(startDate).getTime();
 	const endTimestamp = endDate instanceof Date ? endDate.getTime() : new Date(endDate).getTime();
 
-	// Filter the array based on the date range
 	const filteredData = dataArray.filter(item => {
 		return item.date >= startTimestamp && item.date <= endTimestamp;
 	});
@@ -11,25 +9,28 @@ function filterDataByDate(dataArray, startDate, endDate) {
 	return filteredData;
 }
 
-
 axios({
 		'method': 'GET',
-		'url': '/sensor/'+document.querySelector('#sensorId').dataset.id+'/messages'
+		'url': '/sensor/'+$('#sensorId').data('id')+'/messages'
 	}).then(function(result) {
-		$('#humidityData').text(result.data[0].humidity);
-		$('#temperatureData').text(result.data[0].temperature);
-		$('#batteryData').text(result.data[0].battery);
+		if ($('#sensorId').data('sensorGroup') == '643d74c4e0b8bb55977b2e59') {
+			$('#humidityData').text(result.data[0].humidity);
+			$('#temperatureData').text(result.data[0].temperature);
+			$('#batteryData').text(result.data[0].battery);
+		} else if ($('#sensorId').data('sensorGroup') == '6445409bc69c3c4137aea1c7') {
+			$('#temperatureData').text(result.data[0].temperature);
+		}
 		setColors();
 		datareversed = result.data.reverse();
-		document.getElementById('temperatureloading').classList.remove('d-flex');
-		document.getElementById('temperatureloading').classList.add('d-none');
+		$('#temperatureloading').removeClass('d-flex');
+		$('#temperatureloading').addClass('d-none');
 		temperatureseries = createChart('temperaturechart',	datareversed, 'temperature', '°C');
-		document.getElementById('humidityloading').classList.remove('d-flex');
-		document.getElementById('humidityloading').classList.add('d-none');
+		$('#humidityloading').removeClass('d-flex');
+		$('#humidityloading').addClass('d-none');
 		humidityseries = createChart('humiditychart', datareversed, 'humidity', '%');
 
-		document.querySelectorAll('.periodbutton').forEach((periodButton) => {
-			periodButton.addEventListener('click', function() {
+		$('.periodbutton').each(function() {
+			$(this).on('click', function() {
 				let date = new Date();
 				filteredData = filterDataByDate(datareversed, date.setDate(date.getDate() - this.dataset.period), new Date());
 				temperatureseries.data.setAll(filteredData);
