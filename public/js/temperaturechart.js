@@ -45,4 +45,10 @@ axios({
 			humidityseries.data.setAll(filteredData)
 		})
 
+		$('#daterange-mobile').on('apply.daterangepicker', function(ev, picker) {
+			filteredData = filterDataByDate(datareversed, picker.startDate.toDate().getTime(), picker.endDate.toDate().getTime());
+			temperatureseries.data.setAll(filteredData);
+			humidityseries.data.setAll(filteredData)
+		})
+
 	});
