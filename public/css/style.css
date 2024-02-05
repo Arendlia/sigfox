@@ -65,6 +65,10 @@ body{
     font-size: 17px;
 }
 
+.text-small{
+    font-size: 14px;
+}
+
 .error-title{
     font-size: 20px;
 }
@@ -135,6 +139,14 @@ body{
 
 #daterange{
     display:flex;
+}
+
+#map { 
+    height: 300px; 
+}
+
+.tab-map { 
+    height: 300px; 
 }
 
 

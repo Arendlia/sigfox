@@ -1,3 +1,4 @@
+if($("#humiditychart").length) {
 am5.ready(function() {
     var root = am5.Root.new("humiditychart");
     root.setThemes([
@@ -92,4 +93,4 @@ document.querySelectorAll('.periodbutton').forEach((periodButton) => {
         series.data.setAll(generateRandomData(date.setDate(date.getDate() - this.dataset.period), new Date()));
     })
 })
-});
+});}

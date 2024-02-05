@@ -25,7 +25,7 @@
                                 <span class="text-center text-text">Batterie</span>
                                 <span class="text-center bold"><span id="batteryData">51</span>%</span>
                             </div>
-                            <% } else if (sensor.deviceType.id == '6445409bc69c3c4137aea1c7 ') { %>
+                            <% } else if (sensor.deviceType.id == '6445409bc69c3c4137aea1c7') { %>
                                 <div class="d-flex flex-column">
                                     <i class="fa-solid fa-map-location-dot icon"></i>
                                     <span class="text-center text-text">Latitude</span>
@@ -77,11 +77,40 @@
             <div class="d-flex bd-highlight mb-3 d-flex group-of-cards bd-highlight mb-3">
                 <% if (sensor.deviceType.id == '6445409bc69c3c4137aea1c7') { %>
                 <div class="p-2 bd-highlight w-100">
-                <div class="card big-card item-background border-none shadow">
-                    <div class="card-body">
-                        <p class="card-text"><span class="bold">Position du capteur</span></p>
-                    </div>
-                </div>
+                    <div class="card big-card item-background border-none shadow">
+                        <div class="row g-0">
+                            <p class="card-text m-3"><span class="bold">Position du capteur</span></p>
+                          <div class="col-md">
+                            <div id="map"></div>
+                          </div>
+                          <div class="col-md-4 d-none overflow-auto tab-map" id="collapse">
+                                <ul class="list-group">
+                                    <li class="list-group-item bold">Dernières Positions</li>
+                                    <li class="list-group-item d-flex flex-column">
+                                        <span>13 décembre - 14:00</span>
+                                        <span class="text-text text-small">49,543 - 34,594</span>
+                                    </li>
+                                    <li class="list-group-item d-flex flex-column">
+                                        <span>13 décembre - 14:00</span>
+                                        <span class="text-text text-small">49,543 - 34,594</span>
+                                    </li>
+                                    <li class="list-group-item d-flex flex-column">
+                                        <span>13 décembre - 14:00</span>
+                                        <span class="text-text text-small">49,543 - 34,594</span>
+                                    </li>
+                                    <li class="list-group-item d-flex flex-column">
+                                        <span>13 décembre - 14:00</span>
+                                        <span class="text-text text-small">49,543 - 34,594</span>
+                                    </li>
+                                    <li class="list-group-item d-flex flex-column">
+                                        <span>13 décembre - 14:00</span>
+                                        <span class="text-text text-small">49,543 - 34,594</span>
+                                    </li>
+                                  </ul>
+                          </div>
+                        </div>
+                      </div>
+                
                 </div>
                 <% }%>
                 <div class="p-2 bd-highlight w-100">
