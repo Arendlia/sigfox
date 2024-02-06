@@ -2,13 +2,11 @@ const inverserOrdreOctets = require("./invertHexa");
 /**
  * Fonction convertDateAndHexa
  * 
- * Pour les besoins des graphiques cette fonction regroupe deux fonctions : ConvertTimestampToDatetime et convertHexaToJson
- * 
  * @param {timestamp} timestamp 
  * @param {*} value 
  * @returns {Array}
  */
-function convertHexa(timestamp, value) {
+function BKeepUncoding(timestamp, value) {
     const hexInverse = inverserOrdreOctets(value.slice(0, 4));
     const prefixedHexInverse = '0x' + hexInverse;
     let hexaT = parseInt(prefixedHexInverse, 16);
