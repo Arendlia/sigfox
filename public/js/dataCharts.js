@@ -17,6 +17,10 @@ axios({
 			$('#humidityData').text(result.data[0].humidity);
 			$('#temperatureData').text(result.data[0].temperature);
 			$('#batteryData').text(result.data[0].battery);
+			$('#humidityloading').removeClass('d-flex');
+			$('#humidityloading').addClass('d-none');
+			$('#humiditychart').removeClass('d-none');
+			humidityseries = createChart('humiditychart', datareversed, 'humidity', '%');
 		} else if ($('#sensorId').data('sensorGroup') == '6445409bc69c3c4137aea1c7') {
 			$('#temperatureData').text(result.data[0].temperature);
 		}
@@ -26,10 +30,6 @@ axios({
 		$('#temperatureloading').addClass('d-none');
 		$('#temperaturechart').removeClass('d-none');
 		temperatureseries = createChart('temperaturechart',	datareversed, 'temperature', '°C');
-		$('#humidityloading').removeClass('d-flex');
-		$('#humidityloading').addClass('d-none');
-		$('#humiditychart').removeClass('d-none');
-		humidityseries = createChart('humiditychart', datareversed, 'humidity', '%');
 		$('.periodbutton').each(function() {
 			$(this).on('click', function() {
 				let date = new Date();
