@@ -11,7 +11,7 @@ function filterDataByDate(dataArray, startDate, endDate) {
 
 axios({
 		'method': 'GET',
-		'url': '/sensor/'+$('#sensorId').data('id')+'/messages'
+		'url': '/sensor/'+$('#sensorId').data('id')+'/messages?device-type='+$('#sensorId').data('sensorGroup')
 	}).then(function(result) {
 		if ($('#sensorId').data('sensorGroup') == '643d74c4e0b8bb55977b2e59') {
 			$('#humidityData').text(result.data[0].humidity);

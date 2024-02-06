@@ -1,4 +1,4 @@
-function bSwarmUncoding(value) {
+function bSwarmUncoding(timestamp, value) {
     let lat = parseInt(value.slice(0, 8), 16).toString(2).padStart(4, '0');
     let lon = parseInt(value.slice(8, 16), 16).toString(2).padStart(4, '0');
     let temperature = parseInt(value.slice(16, 18), 16).toString(2).padStart(4, '0');
@@ -24,6 +24,7 @@ function bSwarmUncoding(value) {
     let tempValue = tempSign * (temperatureInt & 0x7FFFFFFF);
 
     return {
+        date: timestamp,
         latitude: latDegrees + "." + latMinutes,
         longitude: lngDegrees + "." + lngMinutes,
         temperature: tempValue

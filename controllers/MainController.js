@@ -87,12 +87,14 @@ exports.getAllMessages = async (req, res) => {
         }
         results.push(...messages?.data);     
     }
+    
+    console.log(req.query['device-type'] == process.env.B_KEEP_DEVICETYPE);
     results.forEach((data) => {
         if (req.query['device-type']) {
             if (req.query['device-type'] == process.env.B_KEEP_DEVICETYPE) {
                 tabNewData.push(bKeepUncoding(data.time, data.data));
             } else if (req.query['device-type'] == process.env.B_SWARM_DEVICETYPE) {
-                tabNewData.push(bSwarmUncoding(data.data))
+                tabNewData.push(bSwarmUncoding(data.time, data.data))
             }
         }
     })
