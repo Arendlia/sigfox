@@ -8,7 +8,7 @@ const inverserOrdreOctets = require("./invertHexa");
  * @param {*} value 
  * @returns {Array}
  */
-function BKeepUncoding(timestamp, value) {
+function bKeepUncoding(timestamp, value) {
     const hexInverse = inverserOrdreOctets(value.slice(0, 4));
     const prefixedHexInverse = '0x' + hexInverse;
     let hexaT = parseInt(prefixedHexInverse, 16);
@@ -24,4 +24,4 @@ function BKeepUncoding(timestamp, value) {
     return tabData;
 }
 
-module.exports = BKeepUncoding;
+module.exports = bKeepUncoding;

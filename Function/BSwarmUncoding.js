@@ -1,4 +1,4 @@
-function BSwarmUncoding(value) {
+function bSwarmUncoding(value) {
     let lat = parseInt(value.slice(0, 8), 16).toString(2).padStart(4, '0');
     let lon = parseInt(value.slice(8, 16), 16).toString(2).padStart(4, '0');
     let temperature = parseInt(value.slice(16, 18), 16).toString(2).padStart(4, '0');
@@ -30,4 +30,4 @@ function BSwarmUncoding(value) {
     };
 }
 
-module.exports = BSwarmUncoding;
+module.exports = bSwarmUncoding;
