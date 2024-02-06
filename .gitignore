@@ -3,4 +3,4 @@
 /public/js/getDataByJson.mjs
 /public/js/messages.json
 .DS_Store
-.env
+.env.local
