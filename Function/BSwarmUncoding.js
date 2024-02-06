@@ -18,8 +18,6 @@ function BSwarmUncoding(value) {
     let lngValue = lngSign * (lonInt & 0x7FFFFFFF);
     let lngDegrees = Math.floor(lngValue / 1000000);
     let lngMinutes = ((lngValue % 1000000) / 60) * 100;
-    console.log(lngDegrees);
-    console.log(lngMinutes);
 
     // Temperature decoding
     let tempSign = (temperatureInt & 0x80000000) ? -1 : 1;
@@ -32,4 +30,4 @@ function BSwarmUncoding(value) {
     };
 }
 
-module.exports = hexToData;
+module.exports = BSwarmUncoding;

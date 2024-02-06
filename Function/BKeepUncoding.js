@@ -2,6 +2,8 @@ const inverserOrdreOctets = require("./invertHexa");
 /**
  * Fonction convertDateAndHexa
  * 
+ * Pour les besoins des graphiques cette fonction regroupe deux fonctions : ConvertTimestampToDatetime et convertHexaToJson
+ * 
  * @param {timestamp} timestamp 
  * @param {*} value 
  * @returns {Array}
@@ -22,4 +24,4 @@ function BKeepUncoding(timestamp, value) {
     return tabData;
 }
 
-module.exports = convertHexa;
+module.exports = BKeepUncoding;

@@ -1,5 +1,5 @@
 let axios = require('axios');
-let convertHexa = require('../function/convertHexa');
+let convertHexa = require('../function/BKeepUncoding');
 let moment = require('moment');
 
 exports.home = async (req, res) => {
@@ -87,7 +87,7 @@ exports.getAllMessages = async (req, res) => {
         results.push(...messages?.data);     
     }
     results.forEach((data) => {
-        tabNewData.push(convertHexa(data.time, data.data))
+        tabNewData.push(BKeepUncoding(data.time, data.data))
     })
     return res.send(tabNewData);
 }
