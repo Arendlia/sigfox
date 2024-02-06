@@ -1,6 +1,6 @@
 let axios = require('axios');
 let bKeepUncoding = require('../function/bKeepUncoding');
-const bSwarmUncoding = require('../function/BSwarmUncoding');
+const bSwarmUncoding = require('../function/bSwarmUncoding');
 let moment = require('moment');
 
 exports.home = async (req, res) => {
