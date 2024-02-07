@@ -88,10 +88,11 @@
                     <div class="card big-card item-background border-none shadow">
                         <div class="row g-0">
                             <p class="card-text m-3"><span class="bold">Position du capteur</span></p>
-                          <div class="col-md">
-                            <div id="map"></div>
-                          </div>
-                          <div class="col-md-4 d-none overflow-auto tab-map" id="collapse">
+                            <div class="col-md">
+                                <img id="mapLoader" src="/images/loading.svg" alt="chargement"/>
+                                <div id="map" class="d-none"></div>
+                            </div>
+                            <div class="col-md-4 d-none overflow-auto tab-map" id="collapse">
                                 <ul class="list-group">
                                     <li class="list-group-item bold">Dernières Positions</li>
                                     <li class="list-group-item d-flex flex-column">
@@ -114,10 +115,10 @@
                                         <span>13 décembre - 14:00</span>
                                         <span class="text-text text-small">49,543 - 34,594</span>
                                     </li>
-                                  </ul>
-                          </div>
-                      </div>
-                      <div id="collapse-mobile" class="d-none">
+                                </ul>
+                            </div>
+                    </div>
+                    <div id="collapse-mobile" class="d-none">
                         <table class ="table">
                             <thead>
                                 <tr>
@@ -133,19 +134,19 @@
                                     <td>34,594</td>
                                 </tr>
                                 <tr>
-                                  <th scope="row">13 décembre - 14:00</th>
-                                  <td>49,543</td>
-                                  <td>34,594</td>
+                                    <th scope="row">13 décembre - 14:00</th>
+                                    <td>49,543</td>
+                                    <td>34,594</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">13 décembre - 14:00</th>
                                     <td>49,543</td>
                                     <td>34,594</td>
                                 </tr>
-                              </tbody>     
+                            </tbody>     
                         </table>
                     </div>
-                  </div>
+                </div>
             </div>
                 <% }%>
                 <div class="p-2 bd-highlight w-100">
