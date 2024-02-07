@@ -11,11 +11,12 @@ $(function() {
     /**
      * The start date of the date range.
      * @type {Date}
+     * by default current date minus one day
      */
     var startDate = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate()-1, 0, 0, 0, 0);
     
     /**
-     * The current date of the date range.
+     * The date of the date range.
      * @type {Date}
      */
     var date = startDate

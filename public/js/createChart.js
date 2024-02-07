@@ -1,3 +1,11 @@
+/**
+ * Creates a new am5 xy chart with the given div element and data.
+ * @param {HTMLElement} div - The div element to render the chart in.
+ * @param {object[]} data - The data for the chart.
+ * @param {string} value - The field name of the y-value.
+ * @param {string} unit - The unit of the y-value.
+ * @returns {am5xy.SmoothedXLineSeries} The created series.
+ */
 function createChart(div, data, value, unit) {
     var root = am5.Root.new(div);
     root.setThemes([

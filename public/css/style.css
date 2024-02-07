@@ -1,3 +1,4 @@
+/* Default body style */
 body{
     font-size: 17px;
     font-family: var(--font-family), sans-serif;
@@ -7,6 +8,7 @@ body{
     height: 100%; 
 }
 
+/* Default classes for background and text color */
 .primary-background{
     background-color: var(--primary-color); 
 }
@@ -57,6 +59,7 @@ body{
     color: var(--item-color); 
 }
 
+/* Default classes for text-size and wieght */
 .heading-text{
     font-size: 25px;
 }
@@ -82,16 +85,20 @@ body{
     font-weight: var(--bold-font-weight);
 }
 
+/* default class to remove border */
+
 .border-none{
     border: none;
 }
 
+/* logo in topbar style */
 .logo{
     margin: 0.5%;
     width: 100px;
     color: var(--item-color)
 }
 
+/* background in home and errors pages */
 .background-svg{
     width: 100vw;
     height: 90vh;
@@ -99,6 +106,7 @@ body{
     background-image: url("../images/background.svg");
 }
 
+/* Home page */
 .card-center{
     position: absolute;
     top: 50%;
@@ -117,6 +125,7 @@ body{
     box-shadow: -1px 2px 10px 3px rgba(134, 134, 134, 0.2) inset;
 }
 
+/* Sensor page */
 .icon{
     font-size:37px;
 }
@@ -157,7 +166,7 @@ body{
     display:none;
 }
 
-
+/* Responsive */
 @media only screen and (max-width: 900px) {
     .card-center{
         width: 80%;

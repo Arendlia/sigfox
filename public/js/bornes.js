@@ -3,8 +3,14 @@
  */
 
 /**
- * This object contains the minimum and maximum thresholds for the humidity, temperature, and battery levels, indicating the danger and warning zones.
+ * This object contains the minimum and maximum thresholds for humidity indicating the danger, warning and success zones.
  * @type {Object}
+ * 
+ * value < or = minDanger or value > or = maxDanger --> danger color
+ * value > or = minWarning and value < or = maxWarning --> success color
+ * value > or = minDanger and value < minWarning --> warning color
+ * value > minDanger and value < minWarning --> warning color
+ * value < maxDanger and value > maxWarning --> warning color
  */
 const humidityBornes = {
     "minDanger": 10,
@@ -13,8 +19,13 @@ const humidityBornes = {
     "maxDanger": 70
 }
 /**
- * This object contains the minimum and maximum thresholds for the humidity, temperature, and battery levels, indicating the danger and warning zones.
+ * This object contains the minimum and maximum thresholds for temperature indicating the danger, warning and sucess zones.
  * @type {Object}
+ * value < or = minDanger or value > or = maxDanger --> danger color
+ * value > or = minWarning and value < or = maxWarning --> success color
+ * value > or = minDanger and value < minWarning --> warning color
+ * value > minDanger and value < minWarning --> warning color
+ * value < maxDanger and value > maxWarning --> warning color
  */
 const temperatureBornes = {
     "minDanger": -10,
@@ -23,8 +34,11 @@ const temperatureBornes = {
     "maxDanger": 31
 }
 /**
- * This object contains the minimum and maximum thresholds for the battery level, indicating the danger and success zones.
+ * This object contains the minimum and maximum thresholds for the battery level, indicating the danger, warning and success zones.
  * @type {Object}
+ * value < or = danger --> danger color
+ * value > or = success --> success color
+ * danger < value < success -->warning color
  */
 const batteryBornes = {
     "danger": 30,
@@ -98,6 +112,10 @@ $(function() {
             $('.fa-wifi').addClass('text-success')
         }
     }
+
+    /**
+     * Call all icons function to change their color based on their status.
+     */
     humidity()
     temperature()
     battery()
