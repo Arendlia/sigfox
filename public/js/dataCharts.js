@@ -9,15 +9,22 @@ function filterDataByDate(dataArray, startDate, endDate) {
 
 function setLastPositions(data) {
 	let html = '<li class="list-group-item bold">Dernières Positions</li>';
+	let htmlMobile = '';
 	data.forEach(position => {
 		if (position.latitude && position.longitude) {
 			html += `<li data-lat="${position.latitude}" data-lng="${position.longitude}" class="sensor-position-item list-group-item d-flex flex-column">
 			<span>${moment(position.date).format('DD/MM/YYYY - HH:MM')}</span>
 			<span class="text-text text-small">${position.latitude}, ${position.longitude}</span>
 			</li>`
+			htmlMobile += `<tr class="sensor-position-item" data-lat="${position.latitude}" data-lng="${position.longitude}">
+			<th scope="row">${moment(position.date).format('DD/MM/YYYY - HH:MM')}</th>
+			<td>${position.latitude}</td>
+			<td>${position.longitude}</td>
+			</tr>`
 		}
 	});
 	$('#collapse .list-group').html(html);
+	$('#collapse-mobile tbody').html(html);
 }
 
 $(function() {
@@ -71,6 +78,9 @@ $(function() {
 			})
 	
 			$('#collapse').on('click', '.sensor-position-item', function() {
+				setMarker($(this).data('lat'), $(this).data('lng'))
+			})
+			$('#collapse-mobile').on('click', '.sensor-position-item', function() {
 				setMarker($(this).data('lat'), $(this).data('lng'))
 			})
 		}
