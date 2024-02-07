@@ -3,24 +3,19 @@
  * @param {string} hex - the hex string to reverse
  * @returns {string} the reversed hex string
  */
-
 function inverserOrdreOctets(hex) {
-    // Vérifier si la chaîne hexadécimale a une longueur paire
-    if (hex.length % 2 !== 0) {
-        console.error("La chaîne hexadécimale doit avoir une longueur paire.");
-        return null;
-    }
+  if (hex.length % 2 !== 0) {
+    // Throw an error if the hex string is not an even length
+    throw new Error("La chaîne hexadécimale doit avoir une longueur paire.");
+  }
 
-    // Diviser la chaîne hexadécimale en paires d'octets
-    const octets = hex.match(/.{1,2}/g);
+  const octets = hex.match(/.{1,2}/g); // Split the hex string into pairs of characters
 
-    // Inverser l'ordre des octets
-    const octetsInverses = octets.reverse();
+  const octetsInverses = octets.reverse(); // Reverse the order of the characters in each pair
 
-    // Concaténer les octets inverses pour obtenir la nouvelle chaîne hexadécimale
-    const hexInverse = octetsInverses.join("");
+  const hexInverse = octetsInverses.join(""); // Join the characters back into a hex string
 
-    return hexInverse;
+  return hexInverse;
 }
 
 module.exports = inverserOrdreOctets;

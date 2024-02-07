@@ -9,7 +9,6 @@
 let axios = require('axios');
 let convertHexa = require('../function/convertHexa');
 
-
 /**
  * The home route
  * @param {Object} req - The request object
@@ -51,11 +50,6 @@ exports.sensor = async (req, res) => {
                 'password': process.env.API_PASSWORD
             }
         });
-        // TODO route capteur mauvais groupe
-        // if (result.data.group.id != process.env.SENSOR_GROUP) {
-        //     return res.render('badsensor', {'sensor': result.data});
-        // }
-        
         return res.render('sensor', {'sensor': result.data, 'apiUrl': process.env.API_URL});
     } catch (e) {
         if (e.response.status == 500) {
