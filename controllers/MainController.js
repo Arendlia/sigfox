@@ -1,17 +1,42 @@
+/**
+ * @fileoverview This file contains the routes fort the frontend
+ */
+
+/**
+ * @module routes/frontend
+ */
 let axios = require('axios');
 let bKeepUncoding = require('../function/bKeepUncoding');
 const bSwarmUncoding = require('../function/bSwarmUncoding');
 let moment = require('moment');
 
+/**
+ * The home route
+ * @param {Object} req - The request object
+ * @param {Object} res - The response object 
+ * @returns res.render('home')
+ */
 exports.home = async (req, res) => {
     return res.render('search');
 }
 
+/**
+ * The home route
+ * @param {Object} req - The request object
+ * @param {Object} res - The response object
+ * @returns res.redirect
+ */
 exports.homePost = async (req, res) => {
     const id = req.body.id;
     res.redirect('/sensor/'+id);
 }
 
+/**
+ * The sensor route.
+ * @function
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
 exports.sensor = async (req, res) => {
     try {
         let result = await axios({
@@ -38,6 +63,14 @@ exports.sensor = async (req, res) => {
     }
 }
 
+/**
+ * Get the messages for a sensor.
+ * @function
+ * @param {string} sensor - The sensor ID.
+ * @param {number} limit - The number of messages to retrieve.
+ * @param {number} offset - The offset of the messages to retrieve.
+ * @returns {Object} - The response object.
+ */
 async function getMessages(sensor, limit, offset = 0) {
     try {
         result = await axios({
@@ -58,6 +91,12 @@ async function getMessages(sensor, limit, offset = 0) {
     }
 }
 
+/**
+ * Get the last message for a sensor.
+ * @function
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
 exports.getLastMessage = async(req, res) => {
     messages = await getMessages(req.params.id, 1);
     if (messages.error) {
@@ -66,6 +105,12 @@ exports.getLastMessage = async(req, res) => {
     return res.send(messages.data);
 }
 
+/**
+ * Get all messages for a sensor.
+ * @function
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ */
 exports.getAllMessages = async (req, res) => {
     let results = [];
     let tabNewData = [];
