@@ -1,3 +1,8 @@
+/**
+ * Inverse the order of the bytes in a hex string
+ * @param {string} hex - the hex string to reverse
+ * @returns {string} the reversed hex string
+ */
 function inverserOrdreOctets(hex) {
     // Vérifier si la chaîne hexadécimale a une longueur paire
     if (hex.length % 2 !== 0) {

@@ -2,6 +2,9 @@
 const MainController = require('../controllers/MainController');
 const errorController = require('../controllers/ErrorController');
 const errorHandler = require('../middlewares/errorHandler');
+/**
+ * @param {import('express').Application} app
+ */
 module.exports = (app) => {
     app.group("/", (router) => {
         router.get("/", MainController.home);

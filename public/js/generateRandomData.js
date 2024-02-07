@@ -1,3 +1,10 @@
+/**
+ * Generate random data for a weather station.
+ *
+ * @param {Date} startDate - The start date of the data generation.
+ * @param {Date} endDate - The end date of the data generation.
+ * @returns {Object[]} The generated data.
+ */
 const generateRandomData = (startDate, endDate) => {
     const data = [];
 
