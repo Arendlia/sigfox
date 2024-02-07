@@ -1,5 +1,6 @@
 let axios = require('axios');
-let convertHexa = require('../function/convertHexa');
+let bKeepUncoding = require('../function/bKeepUncoding');
+const bSwarmUncoding = require('../function/bSwarmUncoding');
 let moment = require('moment');
 
 exports.home = async (req, res) => {
@@ -86,8 +87,16 @@ exports.getAllMessages = async (req, res) => {
         }
         results.push(...messages?.data);     
     }
+    
+    console.log(req.query['device-type'] == process.env.B_KEEP_DEVICETYPE);
     results.forEach((data) => {
-        tabNewData.push(convertHexa(data.time, data.data))
+        if (req.query['device-type']) {
+            if (req.query['device-type'] == process.env.B_KEEP_DEVICETYPE) {
+                tabNewData.push(bKeepUncoding(data.time, data.data));
+            } else if (req.query['device-type'] == process.env.B_SWARM_DEVICETYPE) {
+                tabNewData.push(bSwarmUncoding(data.time, data.data))
+            }
+        }
     })
     return res.send(tabNewData);
 }
