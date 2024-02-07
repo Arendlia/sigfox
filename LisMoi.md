@@ -18,6 +18,14 @@ npm run dev
 ```
 Elle sera alors accessible ici : http://localhost:3000/
 
+### Environement
+
+Ajouter un fichier d'environement nommé env.local dans le fichier: 
+```
+.env.local
+```
+Pour compléter ce fichier il faut reprendre les informations du fichier .env dans le même dossier et les compléter.
+
 ### Comment l'utiliser
 
 Une fois sur la page web entrez votre numéro de capteur dans la barre de recherche et validez.

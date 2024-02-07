@@ -91,7 +91,7 @@ $(function() {
       ranges: {
          '1 jour': [moment(), moment()],
          '1 semaine': [moment().subtract(7, 'days'), moment()],
-         '1 mois': [moment().subtract(1, 'mounth'), moment()],
+         '1 mois': [moment().subtract(1, 'month'), moment()],
       }
   }, cbMobile);
   function cbMobile(start, end) {

@@ -10,6 +10,15 @@ npm install
 ```
 If you didn't install npm here's the doc to install it: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
 
+### Environement
+
+Add an environement file called env.local in the folder: 
+```
+.env.local
+```
+You just have to get information from the .env in the same folder and complete them.
+
+
 ### Launch application
 
 To launch the application you need to use this command in your prompt:
