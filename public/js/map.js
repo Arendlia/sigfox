@@ -1,13 +1,21 @@
 var marker = undefined;
 var map = L.map('map');
+var markerLayer = L.layerGroup().addTo(map);
 
 function setMap(data) {
     if ($('#map').length != 0) {
-        map.setView([data[0].latitude, data[0].longitude], 13);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
         }).addTo(map);
-        marker = setMarker(data[0]);
+        let position = null;
+        let index = 0;
+        while (position === null) {
+            if (data[index].latitude) {
+                position = index;
+            }
+            index++;
+        }
+        marker = setMarker(data[position].latitude, data[position].longitude);
         var legend = L.control({
             position: 'topright'
         });
@@ -43,7 +51,8 @@ function setMap(data) {
     return map;
 }
 
-function setMarker(data) {
+function setMarker(latitude, longitude) {
+    markerLayer.clearLayers();
     let icon = L.icon({
         iconUrl: '/images/dot.svg',
         iconSize: [38, 95], // size of the icon
@@ -52,8 +61,8 @@ function setMarker(data) {
         shadowAnchor: [4, 62], // the same for the shadow
         popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
     });
-
-    return L.marker([data.latitude, data.longitude], {
+    new L.marker([latitude, longitude], {
         icon: icon
-    }).addTo(map);
+    }).addTo(markerLayer);
+    map.setView([latitude, parseFloat(longitude+0.015)], 13);
 }
