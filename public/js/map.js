@@ -1,7 +1,17 @@
+
+/**
+ * Creates a map with a marker in the center of London
+ * @param {string} id - the id of the element to contain the map
+ */
+
+// create the map in the specified element
 var map = L.map('map').setView([51.505, -0.09], 13);
+// add a tile layer
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
 }).addTo(map);
+
+// create an icon for the marker
 var icon = L.icon({
     iconUrl: '/images/dot.svg',
 
@@ -11,7 +21,10 @@ var icon = L.icon({
     shadowAnchor: [4, 62],  // the same for the shadow
     popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 });
+// create a marker and add it to the map
 L.marker([51.5, -0.09], {icon: icon}).addTo(map);
+
+// create a legend control
 var legend = L.control({position: 'topright'});
     legend.onAdd = function(map) {
         var button = L.DomUtil.create("button", "btn btn-light");
@@ -26,17 +39,14 @@ var legend = L.control({position: 'topright'});
     };
                         
     legend.addTo(map);
-
+    
+// toggle the legend on click
 $("#legentBtn").click(function(){
+    console.log("log")
     if($("#collapse").hasClass("d-none")){
         $("#collapse").removeClass("d-none")
     }else{
         $("#collapse").addClass("d-none")
-    }
-    if($("#collapse-mobile").hasClass("d-none")){
-        $("#collapse-mobile").removeClass("d-none")
-    }else{
-        $("#collapse-mobile").addClass("d-none")
     }
     
   });

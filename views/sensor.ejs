@@ -4,12 +4,12 @@
             <div class="p-2 bd-highlight w-100">
                 <div class="card small-card item-background border-none shadow">
                     <div class="card-body">
+                        <!-- Identification sur le type de capteur -->
                         <div class="d-flex justify-content-between">
                             <p class="card-text"><span class="text-text">Capteur | </span><span class="bold" data-id="<%= sensor.id %>" id="sensorId"><%= sensor.id %></span></p>
                             <p class="card-text"><span class="text-text">Type | </span><span class="bold"><%= sensor.name %></span></p>
                         </div>
-                        <div id="liveData" class="d-flex justify-content-around invisible">
-                            <img id="liveDataLoader" class="position-absolute visible h-50" src="/images/loading.svg" alt="chargement"/>
+                        <div class="d-flex justify-content-around">
                             <div class="d-flex flex-column">
                                 <i class="fa-solid fa-temperature-three-quarters icon"></i>
                                 <span class="text-center text-text">Température</span>
@@ -45,13 +45,11 @@
                                 <span id="dataWifi" class="text-center bold"><%= lqi[sensor.lqi] %></span>
                             </div>
                         </div>
-                        <div class="d-flex justify-content-end mt-2">
-                            <span class="text-text text-small"><%= moment(sensor.lastCom).format('Do MMMM YYYY à HH:MM'); %></span>
-                        </div>
                     </div>
                 </div>
             </div>
             <div class="p-2 bd-highlight w-100">
+                <!-- Les différents filtres applicables -->
                 <div class="card small-card filtre-card item-background border-none shadow">
                     <div class="card-body">
                         <p class="card-text bold">Filtres</p>
@@ -78,11 +76,7 @@
                     </div>
                 </div>
             </div>
-            <% if (sensor.deviceType.id == '643d74c4e0b8bb55977b2e59') { %>
-                <div class="d-flex bd-highlight mb-3 d-flex group-of-cards bd-highlight mb-3">
-            <% }else if (sensor.deviceType.id == '6445409bc69c3c4137aea1c7') { %>
-                <div class="d-flex bd-highlight mb-3 d-flex group-of-cards-gps bd-highlight mb-3">
-                <% }%>
+            <div class="d-flex bd-highlight mb-3 d-flex group-of-cards bd-highlight mb-3">
                 <% if (sensor.deviceType.id == '6445409bc69c3c4137aea1c7') { %>
                 <div class="p-2 bd-highlight w-100">
                     <div class="card big-card item-background border-none shadow">
@@ -114,56 +108,30 @@
                                         <span>13 décembre - 14:00</span>
                                         <span class="text-text text-small">49,543 - 34,594</span>
                                     </li>
-                                  </ul>
+                                </ul>
                           </div>
+                        </div>
                       </div>
-                      <div id="collapse-mobile" class="d-none">
-                        <table class ="table">
-                            <thead>
-                                <tr>
-                                    <th class="col-8">Date</th>
-                                    <th class="col-4">Longitude</th>
-                                    <th class="col-4">Latitude</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">13 décembre - 14:00</th>
-                                    <td>49,543</td>
-                                    <td>34,594</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">13 décembre - 14:00</th>
-                                  <td>49,543</td>
-                                  <td>34,594</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">13 décembre - 14:00</th>
-                                    <td>49,543</td>
-                                    <td>34,594</td>
-                                </tr>
-                              </tbody>     
-                        </table>
-                    </div>
-                  </div>
-            </div>
+                </div>
                 <% }%>
                 <div class="p-2 bd-highlight w-100">
-                <div class="card big-card item-background border-none shadow">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <p class="card-text"><span class="bold">Historique de la température</span></p>
-                        </div>
-                        <div id="temperatureloading" class="d-flex justify-content-center align-items-center">
-                            <img src="/images/loading.svg" alt="chargement"/>
-                        </div>
-                        <div id="temperaturechart" class="d-none" style="width: 100%; height: 300px">
+                <!-- Affiche l'historique des température  -->
+                    <div class="card big-card item-background border-none shadow">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <p class="card-text"><span class="bold">Historique de la température</span></p>
+                            </div>
+                            <div id="temperatureloading" class="d-flex justify-content-center align-items-center">
+                                <img src="/images/loading.svg" alt="chargement"/>
+                            </div>
+                            <div id="temperaturechart" style="width: 100%; height: 300px">
+                            </div>
                         </div>
                     </div>
-                </div>
                 </div>
                 <% if (sensor.deviceType.id == '643d74c4e0b8bb55977b2e59') { %>
                 <div class="p-2 bd-highlight w-100">
+                    <!-- Affiche l'historique d'humidité -->
                     <div class="card big-card item-background border-none shadow">
                     <div class="card-body">
                         <div class="d-flex justify-content-between">
@@ -172,7 +140,7 @@
                         <div id="humidityloading" class="d-flex justify-content-center align-items-center">
                             <img src="/images/loading.svg" alt="chargement"/>
                         </div>
-                        <div id="humiditychart" class="d-none" style="width: 100%; height: 300px">
+                        <div id="humiditychart" style="width: 100%; height: 300px">
                         </div>
                     </div>
                     </div>
