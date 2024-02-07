@@ -18,7 +18,6 @@ function bKeepUncoding(timestamp, value) {
     }
     const hexaH = parseInt(value.slice(4, 6), 16);
     const hexaB = parseInt(value.slice(6, 8), 16);
-    const hexaString = hexaT.toString();
 
     const tabData = {'date': timestamp ,'temperature': hexaT/100, 'humidity': hexaH, 'battery': hexaB/150 * 100 };
     return tabData;
