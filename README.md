@@ -1,61 +1,73 @@
 # Expose
 
-Expose est une application web vous permettant de collecter les données de vos capteur B-Keep et B-Swarm.
+Expose is a web application which allow you to collect your BeeKeep and BeeSwarm sensors datas.
 
-## Pour commencer
+## Getting Started
 
-Pour installer l'application il vous suffit de la télécharger via ce repository et de lancer la commande :
+To install the application just clone the repo and launch this command in your bash (pay attention to be in the good folder):
 ```
 npm install
 ```
-Si vous ne possédez pas npm voici le lien de la documentation: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
+If you didn't install npm here's the doc to install it: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
 
-### Démarer l'application
+### Launch application
 
-Une fois les dépendances installées vous povez lancer l'application avec la commande 
+To launch the application you need to use this command in your prompt:
 ```
 npm run dev
 ```
-Elle sera alors accessible ici : http://localhost:3000/
+You can now access it with this url : http://localhost:3000/
 
-### Comment l'utiliser
+### Hox to use it
 
-Une fois sur la page web entrez votre numéro de capteur dans la barre de recherche et validez.
-Vous arriverez ensuite sur la page de votre capteur avec laquelle vous pouvez accéder à:
+When you are on the web page you can type your sensor id in the search bar and validate it.
+You'll be redirected to your sensor page and you'll see:
 
-    - Vos données en temps réel dans la première carte
-    - Vos filtres de temps pour avoir des données triées sur un jour /une semaine / un mois ou sur un laps de temps personalisé dans la deuxième carte
-    - Vos données du capteur dans la troisième et quatrième carte
+    - Your data in real time in the first card
+    - Your datetime filters to have your datas for one day / one week / one month or for personalised datetime in the second card
+    - Your sensor datas in the third and fourth card
 
-Attention si vous utilisez l'API sigfox gratuite vous n'avez le droit qu'à 10 appels par heures.
+Pay attention if you use free sigfox API you can do 10 API call by hour.
 
-## Personalisation
+## Personalization
 
-Ce projet est personalisable si vous voulez le mettre aux couleurs de votre entreprise où même si vous voulez juste changer pour se faire vous pouvez accéder au fichier:
+You can personalize this project if you want, just modify this file: 
+
 ```
 public\css\var.css
 ```
 
-Dans lequel il est possible de changer:
-    - Les couleurs
-    - La police d'écriture
-    - L'épaisseur de la police d'écriture
+You can customize :
+    - Colors
+    - Font
+    - Font weight 
 
-De même si une image ne vous convient le dossier d'image est celui-ci:
+Likewise you can change images in this folder : 
 ```
 public\images 
 ```
 
-Sur la page de capteur il est aussi possible de changer les bornes de couleur des icones de la première carte pour se faire il suffit d'aller dans le fichier :
+On sensor page you can also change colors steps to change first card icons colors in this file : 
 ```
 public\js\bornes.js
 ```
-et de changer les constantes correspondantes.
+You just have to change contants at the begining of the file.
+
+## Router 
+
+The router is in this files : 
+```
+router\router.js
+``` 
+The most important route is : /sensor/:id/messages
+This road permit you to get all datas from your sensor and decrypt them
 
 ## Documentations utiles 
 
 * [Node](https://nodejs.org/docs/latest/api/)
 * [npm]( https://docs.npmjs.com/)
+* [Expressjs](https://expressjs.com/)
+* [Axios](https://axios-http.com/docs/intro)
 * [ejs](https://ejs.co/#install)
 * [bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) 
 * [Fontawesome](https://fontawesome.com/) 
@@ -63,12 +75,12 @@ et de changer les constantes correspondantes.
 * [Moment](https://momentjs.com/) 
 * [AmCharts](https://www.amcharts.com/docs/v5/) 
 
-## Auteurs
+## Authors
 
 * **Cécilia Ruin** - [Arendlia](https://github.com/Arendlia)
 * **Guillaume Bongrand** - [Guillaume](https://github.com/guillaume-bgr)
 * **Océance Fourdain** - [Océance](https://github.com/OceanceFourdain)
 
-## Contribution
+## Conttributors
 * **La Manu Amiens** - [LaManu](https://lamanu.fr/campus/amiens-formation-numerique/)
 
