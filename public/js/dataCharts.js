@@ -25,7 +25,7 @@ $(function() {
 		'method': 'GET',
 		'url': '/sensor/'+$('#sensorId').data('id')+'/messages?device-type='+$('#sensorId').data('sensorGroup')
 	}).then(function(result) {
-		if (result) {
+		if (result.data.length != 0) {
 			setMap(result.data);
 			setLastPositions(result.data);
 			datareversed = result.data.reverse();
