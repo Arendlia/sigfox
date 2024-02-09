@@ -24,7 +24,7 @@ function setLastPositions(data) {
 		}
 	});
 	$('#collapse .list-group').html(html);
-	$('#collapse-mobile tbody').html(html);
+	$('#collapse-mobile tbody').html(htmlMobile);
 }
 
 $(function() {
@@ -33,23 +33,24 @@ $(function() {
 		'url': '/sensor/'+$('#sensorId').data('id')+'/messages?device-type='+$('#sensorId').data('sensorGroup')
 	}).then(function(result) {
 		if (result.data.length != 0) {
-			setMap(result.data);
-			setLastPositions(result.data);
+			data = result.data.slice();
 			datareversed = result.data.reverse();
+			setMap(data);
+			setLastPositions(data);
 			if ($('#sensorId').data('sensorGroup') == '643d74c4e0b8bb55977b2e59') {
-				$('#batteryData').text(result.data[0].battery);
-				$('#humidityData').text(result.data[0].humidity);
+				$('#batteryData').text(data[0].battery);
+				$('#humidityData').text(data[0].humidity);
 				$('#humidityloading').removeClass('d-flex');
 				$('#humidityloading').addClass('d-none');
 				$('#humiditychart').removeClass('d-none');
 				humidityseries = createChart('humiditychart', datareversed, 'humidity', '%');
 			} else if ($('#sensorId').data('sensorGroup') == '6445409bc69c3c4137aea1c7') {
-				$('#latitudeData').text(result.data[0].latitude);
-				$('#longitudeData').text(result.data[0].longitude);
+				$('#latitudeData').text(data[0].latitude);
+				$('#longitudeData').text(data[0].longitude);
 				$('#map').removeClass('d-none');
 				$('#mapLoader').addClass('d-none');
 			}
-			$('#temperatureData').text(result.data[0].temperature);
+			$('#temperatureData').text(data[0].temperature);
 			$('#temperatureloading').removeClass('d-flex');
 			$('#temperatureloading').addClass('d-none');
 			$('#temperaturechart').removeClass('d-none');
