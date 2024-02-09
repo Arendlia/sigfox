@@ -69,8 +69,18 @@ $(function() {
       maxDate: new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate(), 0, 0, 0, 0),
       startDate: startDate,
       locale: {
-        format: 'DD/MM/YYYY'
-      }
+        format: 'DD/MM/YYYY',
+        applyLabel: "Valider",
+        cancelLabel: "Annuler",
+        daysOfWeek: [
+          'Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa'
+        ],
+        monthNames: [
+          'Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 
+          'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Décembre'
+        ],
+        "firstDay": 1
+      },
     }, function(start, end, label) {
         // Update the date range text.
         $('#daterange span').html(start.format('DD/MM/YYYY') + ' - ' + end.format('DD/MM/YYYY'));
@@ -86,12 +96,22 @@ $(function() {
       minDate: new Date(nowDate.getFullYear(), nowDate.getMonth()-1, nowDate.getDate(), 0, 0, 0, 0),
       maxDate: new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate(), 0, 0, 0, 0),
       locale: {
-        format: 'DD/MM/YYYY'
+        format: 'DD/MM/YYYY',
+        applyLabel: "Valider",
+        cancelLabel: "Annuler",
+        daysOfWeek: [
+          'Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa'
+        ],
+        monthNames: [
+          'Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 
+          'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Décembre'
+        ],
+        "firstDay": 1
       },
       ranges: {
          '1 jour': [moment(), moment()],
          '1 semaine': [moment().subtract(7, 'days'), moment()],
-         '1 mois': [moment().subtract(1, 'mounth'), moment()],
+         '1 mois': [moment().subtract(1, 'month'), moment()],
       }
   }, cbMobile);
   function cbMobile(start, end) {

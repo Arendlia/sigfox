@@ -1,73 +1,80 @@
 # Expose
 
-Expose is a web application which allow you to collect your BeeKeep and BeeSwarm sensors datas.
+Expose est une application web vous permettant de collecter les données de vos capteur B-Keep et B-Swarm.
 
-## Getting Started
+## Pour commencer
 
-To install the application just clone the repo and launch this command in your bash (pay attention to be in the good folder):
+Pour installer l'application il vous suffit de la télécharger via ce repository et de lancer la commande :
 ```
 npm install
 ```
-If you didn't install npm here's the doc to install it: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
+Si vous ne possédez pas npm voici le lien de la documentation: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
 
-### Launch application
+### Démarer l'application
 
-To launch the application you need to use this command in your prompt:
+Une fois les dépendances installées vous povez lancer l'application avec la commande 
 ```
 npm run dev
 ```
-You can now access it with this url : http://localhost:3000/
+Elle sera alors accessible ici : http://localhost:3000/
 
-### Hox to use it
+### Environement
 
-When you are on the web page you can type your sensor id in the search bar and validate it.
-You'll be redirected to your sensor page and you'll see:
+Ajouter un fichier d'environement nommé env.local dans le fichier: 
+```
+.env.local
+```
+Pour compléter ce fichier il faut reprendre les informations du fichier .env dans le même dossier et les compléter.
 
-    - Your data in real time in the first card
-    - Your datetime filters to have your datas for one day / one week / one month or for personalised datetime in the second card
-    - Your sensor datas in the third and fourth card
+### Comment l'utiliser
 
-Pay attention if you use free sigfox API you can do 10 API call by hour.
+Une fois sur la page web entrez votre numéro de capteur dans la barre de recherche et validez.
+Vous arriverez ensuite sur la page de votre capteur avec laquelle vous pouvez accéder à:
 
-## Personalization
+    - Vos données en temps réel dans la première carte
+    - Vos filtres de temps pour avoir des données triées sur un jour /une semaine / un mois ou sur un laps de temps personalisé dans la deuxième carte
+    - Vos données du capteur dans la troisième et quatrième carte
 
-You can personalize this project if you want, just modify this file: 
+Attention si vous utilisez l'API sigfox gratuite vous n'avez le droit qu'à 10 appels par heures.
 
+## Personalisation
+
+Ce projet est personalisable si vous voulez le mettre aux couleurs de votre entreprise où même si vous voulez juste changer pour se faire vous pouvez accéder au fichier:
 ```
 public\css\var.css
 ```
 
-You can customize :
-    - Colors
-    - Font
-    - Font weight 
+Dans lequel il est possible de changer:
+    - Les couleurs
+    - La police d'écriture
+    - L'épaisseur de la police d'écriture
 
-Likewise you can change images in this folder : 
+De même si une image ne vous convient le dossier d'image est celui-ci:
 ```
 public\images 
 ```
 
-On sensor page you can also change colors steps to change first card icons colors in this file : 
+Sur la page de capteur il est aussi possible de changer les bornes de couleur des icones de la première carte pour se faire il suffit d'aller dans le fichier :
 ```
 public\js\bornes.js
 ```
-You just have to change contants at the begining of the file.
+et de changer les constantes correspondantes.
 
 ## Router 
 
-The router is in this files : 
+Le router se trouve dans ce fichier : 
 ```
 router\router.js
 ``` 
-The most important route is : /sensor/:id/messages
-This road permit you to get all datas from your sensor and decrypt them
+La route la plus importante dandans est : /sensor/:id/messages
+Elle vous permet de récupérer toutes les données d'un de vous capteur et de les décripter.
 
 ## Documentations utiles 
 
 * [Node](https://nodejs.org/docs/latest/api/)
 * [npm]( https://docs.npmjs.com/)
-* [Expressjs](https://expressjs.com/)
-* [Axios](https://axios-http.com/docs/intro)
+* [Expressjs](https://expressjs.com/fr/)
+* [Axios](https://axios-http.com/fr/docs/intro)
 * [ejs](https://ejs.co/#install)
 * [bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) 
 * [Fontawesome](https://fontawesome.com/) 
@@ -75,12 +82,12 @@ This road permit you to get all datas from your sensor and decrypt them
 * [Moment](https://momentjs.com/) 
 * [AmCharts](https://www.amcharts.com/docs/v5/) 
 
-## Authors
+## Auteurs
 
 * **Cécilia Ruin** - [Arendlia](https://github.com/Arendlia)
 * **Guillaume Bongrand** - [Guillaume](https://github.com/guillaume-bgr)
 * **Océance Fourdain** - [Océance](https://github.com/OceanceFourdain)
 
-## Conttributors
+## Contribution
 * **La Manu Amiens** - [LaManu](https://lamanu.fr/campus/amiens-formation-numerique/)
 
