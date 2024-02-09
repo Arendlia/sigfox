@@ -8,7 +8,7 @@ const inverserOrdreOctets = require("./invertHexa");
  * @param {*} value 
  * @returns {Array}
  */
-function convertHexa(timestamp, value) {
+function bKeepUncoding(timestamp, value) {
     const hexInverse = inverserOrdreOctets(value.slice(0, 4));
     const prefixedHexInverse = '0x' + hexInverse;
     let hexaT = parseInt(prefixedHexInverse, 16);
@@ -18,10 +18,9 @@ function convertHexa(timestamp, value) {
     }
     const hexaH = parseInt(value.slice(4, 6), 16);
     const hexaB = parseInt(value.slice(6, 8), 16);
-    const hexaString = hexaT.toString();
 
     const tabData = {'date': timestamp ,'temperature': hexaT/100, 'humidity': hexaH, 'battery': hexaB/150 * 100 };
     return tabData;
 }
 
-module.exports = convertHexa;
+module.exports = bKeepUncoding;

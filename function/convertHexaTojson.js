@@ -1,5 +1,11 @@
 const inverserOrdreOctets = require('./invertHexa');
 
+/**
+ * Convert a hexadecimal color code to RGB values
+ * @param {string} value - hexadecimal color code
+ * @returns {object} - an object with properties for red, green, and blue values
+ */ 
+
 function convertHexaTojson(value) {
     const hexInverse = inverserOrdreOctets(value.slice(0, 4));
     const hexaT = parseInt(hexInverse, 16);

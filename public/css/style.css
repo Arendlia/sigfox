@@ -1,3 +1,4 @@
+/* Default body style */
 body{
     font-size: 17px;
     font-family: var(--font-family), sans-serif;
@@ -7,6 +8,7 @@ body{
     height: 100%; 
 }
 
+/* Default classes for background and text color */
 .primary-background{
     background-color: var(--primary-color); 
 }
@@ -32,7 +34,7 @@ body{
 }
 
 
-
+/* Default classes for text-size and wieght */
 .primary-text{
    color: var(--primary-color); 
 }
@@ -82,16 +84,19 @@ body{
     font-weight: var(--bold-font-weight);
 }
 
+/* default class to remove border */
 .border-none{
     border: none;
 }
 
+/* logo in topbar style */
 .logo{
     margin: 0.5%;
     width: 100px;
     color: var(--item-color)
 }
 
+/* background in home and errors pages */
 .background-svg{
     width: 100vw;
     height: 90vh;
@@ -99,6 +104,7 @@ body{
     background-image: url("../images/background.svg");
 }
 
+/* Home page  and errors pages*/
 .card-center{
     position: absolute;
     top: 50%;
@@ -117,15 +123,20 @@ body{
     box-shadow: -1px 2px 10px 3px rgba(134, 134, 134, 0.2) inset;
 }
 
+/* Sensor page */
 .icon{
     font-size:37px;
 }
 
 .small-card{
-    height: 170px;
+    height: 180px;
 }
 
 .group-of-cards{
+    flex-direction: row;
+}
+
+.group-of-cards-gps{
     flex-direction: row;
 }
 
@@ -149,7 +160,11 @@ body{
     height: 300px; 
 }
 
+#collapse-mobile{
+    display:none;
+}
 
+/* Responsive */
 @media only screen and (max-width: 900px) {
     .card-center{
         width: 80%;
@@ -171,16 +186,35 @@ body{
         flex-direction: column;
         font-size: 13px;
     }
+    .group-of-cards-gps{
+        flex-direction: column-reverse;
+        font-size: 13px;
+    }
     .group-of-buttons{
         display: none;
     }
     .filtre-card{
         height: 100px;
     }
+
+    #collapse{
+        display:none;
+    }
     #daterange{
         display:none;
     }
     #daterange-mobile{
         display:flex;
+    }
+    #map { 
+        margin:auto;
+        height: 300px; 
+        width: 70vw;
+    }
+
+    #collapse-mobile{
+        display:flex;
+        width: 80%;
+        margin:auto;
     }
   }

@@ -5,36 +5,37 @@
                 <div class="card small-card item-background border-none shadow">
                     <div class="card-body">
                         <div class="d-flex justify-content-between">
-                            <p class="card-text"><span class="text-text">Capteur | </span><span class="bold" data-id="<%= sensor.id %>" id="sensorId"><%= sensor.id %></span></p>
+                            <p class="card-text"><span class="text-text">Capteur | </span><span class="bold" data-sensor-group="<%= sensor.deviceType.id %>" data-id="<%= sensor.id %>" id="sensorId"><%= sensor.id %></span></p>
                             <p class="card-text"><span class="text-text">Type | </span><span class="bold"><%= sensor.name %></span></p>
                         </div>
-                        <div class="d-flex justify-content-around">
+                        <div id="liveData" class="d-flex justify-content-around invisible">
+                            <img id="liveDataLoader" class="position-absolute visible h-50" src="/images/loading.svg" alt="chargement"/>
                             <div class="d-flex flex-column">
                                 <i class="fa-solid fa-temperature-three-quarters icon"></i>
                                 <span class="text-center text-text">Température</span>
-                                <span class="text-center bold"><span id="temperatureData">-3</span>C°</span>
+                                <span class="text-center bold"><span id="temperatureData"></span>C°</span>
                             </div>
                             <% if (sensor.deviceType.id == '643d74c4e0b8bb55977b2e59') { %>
                             <div class="d-flex flex-column">
                                 <i class="fa-solid fa-droplet icon"></i>
                                 <span class="text-center text-text">Humidité</span>
-                                <span class="text-center bold"><span id="humidityData">70</span>%</span>
+                                <span class="text-center bold"><span id="humidityData"></span>%</span>
                             </div>
                             <div class="d-flex flex-column">
                                 <i class="fa-solid fa-battery-three-quarters icon"></i>
                                 <span class="text-center text-text">Batterie</span>
-                                <span class="text-center bold"><span id="batteryData">51</span>%</span>
+                                <span class="text-center bold"><span id="batteryData"></span>%</span>
                             </div>
                             <% } else if (sensor.deviceType.id == '6445409bc69c3c4137aea1c7') { %>
                                 <div class="d-flex flex-column">
                                     <i class="fa-solid fa-map-location-dot icon"></i>
                                     <span class="text-center text-text">Latitude</span>
-                                    <span class="text-center">49,543</span>
+                                    <span class="text-center bold"><span id="latitudeData"></span></span>
                                 </div>
                                 <div class="d-flex flex-column">
                                     <i class="fa-solid fa-map-location-dot icon"></i>
                                     <span class="text-center text-text">Longitude</span>
-                                    <span class="text-center">34,594</span>
+                                    <span class="text-center bold"><span id="longitudeData"></span></span>
                                 </div>
                             <% } %>
                             <% lqi = ['Limitée', 'Bonne', 'Très bonne', 'Très bonne', 'Non disponible'] %>
@@ -43,6 +44,9 @@
                                 <span class="text-center text-text">Connexion</span>
                                 <span id="dataWifi" class="text-center bold"><%= lqi[sensor.lqi] %></span>
                             </div>
+                        </div>
+                        <div class="d-flex justify-content-end mt-2">
+                            <span class="text-text text-small"><%= moment(sensor.lastCom).format('Do MMMM YYYY à HH:MM'); %></span>
                         </div>
                     </div>
                 </div>
@@ -74,16 +78,21 @@
                     </div>
                 </div>
             </div>
-            <div class="d-flex bd-highlight mb-3 d-flex group-of-cards bd-highlight mb-3">
+            <% if (sensor.deviceType.id == '643d74c4e0b8bb55977b2e59') { %>
+                <div class="d-flex bd-highlight mb-3 d-flex group-of-cards bd-highlight mb-3">
+            <% }else if (sensor.deviceType.id == '6445409bc69c3c4137aea1c7') { %>
+                <div class="d-flex bd-highlight mb-3 d-flex group-of-cards-gps bd-highlight mb-3">
+                <% }%>
                 <% if (sensor.deviceType.id == '6445409bc69c3c4137aea1c7') { %>
                 <div class="p-2 bd-highlight w-100">
                     <div class="card big-card item-background border-none shadow">
                         <div class="row g-0">
                             <p class="card-text m-3"><span class="bold">Position du capteur</span></p>
-                          <div class="col-md">
-                            <div id="map"></div>
-                          </div>
-                          <div class="col-md-4 d-none overflow-auto tab-map" id="collapse">
+                            <div class="col-md">
+                                <img id="mapLoader" style="margin-left:300px" src="/images/loading.svg" alt="chargement"/>
+                                <div id="map" class="d-none"></div>
+                            </div>
+                            <div class="col-md-4 d-none overflow-auto tab-map" id="collapse">
                                 <ul class="list-group">
                                     <li class="list-group-item bold">Dernières Positions</li>
                                     <li class="list-group-item d-flex flex-column">
@@ -106,12 +115,39 @@
                                         <span>13 décembre - 14:00</span>
                                         <span class="text-text text-small">49,543 - 34,594</span>
                                     </li>
-                                  </ul>
-                          </div>
-                        </div>
-                      </div>
-                
+                                </ul>
+                            </div>
+                    </div>
+                    <div id="collapse-mobile" class="d-none">
+                        <table class ="table">
+                            <thead>
+                                <tr>
+                                    <th class="col-8">Date</th>
+                                    <th class="col-4">Longitude</th>
+                                    <th class="col-4">Latitude</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">13 décembre - 14:00</th>
+                                    <td>49,543</td>
+                                    <td>34,594</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">13 décembre - 14:00</th>
+                                    <td>49,543</td>
+                                    <td>34,594</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">13 décembre - 14:00</th>
+                                    <td>49,543</td>
+                                    <td>34,594</td>
+                                </tr>
+                            </tbody>     
+                        </table>
+                    </div>
                 </div>
+            </div>
                 <% }%>
                 <div class="p-2 bd-highlight w-100">
                 <div class="card big-card item-background border-none shadow">
@@ -122,7 +158,7 @@
                         <div id="temperatureloading" class="d-flex justify-content-center align-items-center">
                             <img src="/images/loading.svg" alt="chargement"/>
                         </div>
-                        <div id="temperaturechart" style="width: 100%; height: 300px">
+                        <div id="temperaturechart" class="d-none" style="width: 100%; height: 300px">
                         </div>
                     </div>
                 </div>
@@ -137,7 +173,7 @@
                         <div id="humidityloading" class="d-flex justify-content-center align-items-center">
                             <img src="/images/loading.svg" alt="chargement"/>
                         </div>
-                        <div id="humiditychart" style="width: 100%; height: 300px">
+                        <div id="humiditychart" class="d-none" style="width: 100%; height: 300px">
                         </div>
                     </div>
                     </div>

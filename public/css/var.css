@@ -1,5 +1,8 @@
+/* import font Roboto weight 400 / 700 / 900 via google font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+/* Define Personalization variables */
 :root {
+    /* colors */
     --primary-color: #D6A96E;
     --background-color: #EFEFEF;
     --item-color: #F1F1F1;
@@ -8,8 +11,10 @@
     --success-color: #76AA75;
     --text-color: #646464;
 
+    /* font-family */
     --font-family: 'Roboto';
 
+    /* font-wieght */
     --regular-font-weight: 400;
     --bold-font-weight: 700;
     --extra-bold-font-weight: 900;

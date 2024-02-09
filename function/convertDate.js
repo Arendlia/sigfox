@@ -1,12 +1,7 @@
 /**
- * Function for convert timestamp to date js
- * Exemple
- * const convert = require('./Function/convertDate');
- * 
- * let date = convert(344954003)
- * 
- * @param {timestamp} timestamp 
- * @returns results
+ * Convert a Unix timestamp to a human-friendly datetime string.
+ * @param {number} timestamp - A Unix timestamp.
+ * @returns {string} A human-friendly datetime string.
  */
  
 function convertTimestampToDatetime(timestamp) {
