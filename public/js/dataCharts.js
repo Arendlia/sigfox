@@ -35,7 +35,6 @@ $(function() {
 		if (result.data.length != 0) {
 			data = result.data.slice();
 			datareversed = result.data.reverse();
-			setMap(data);
 			setLastPositions(data);
 			if ($('#sensorId').data('sensorGroup') == '643d74c4e0b8bb55977b2e59') {
 				$('#batteryData').text(data[0].battery);
@@ -49,7 +48,7 @@ $(function() {
 				$('#longitudeData').text(data[0].longitude);
 				$('#map').removeClass('d-none');
 				$('#mapLoader').addClass('d-none');
-				setMap(result.data);
+				setMap(data);
 			}
 			$('#temperatureData').text(data[0].temperature);
 			$('#temperatureloading').removeClass('d-flex');
