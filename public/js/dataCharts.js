@@ -49,6 +49,7 @@ $(function() {
 				$('#longitudeData').text(data[0].longitude);
 				$('#map').removeClass('d-none');
 				$('#mapLoader').addClass('d-none');
+				setMap(result.data);
 			}
 			$('#temperatureData').text(data[0].temperature);
 			$('#temperatureloading').removeClass('d-flex');

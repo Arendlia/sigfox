@@ -1,3 +1,9 @@
+/**
+ * Creates a map with a marker in the center of London
+ * @param {string} id - the id of the element to contain the map
+ */
+
+// create the map in the specified element
 var marker = undefined;
 var map = L.map('map');
 var markerLayer = L.layerGroup().addTo(map);
@@ -6,6 +12,8 @@ function setMap(data) {
     if ($('#map').length != 0) {
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
+            tileOptions: {crossOriginKeyword: null},
+            edgeBufferTiles: 5,
         }).addTo(map);
         let position = null;
         let index = 0;
